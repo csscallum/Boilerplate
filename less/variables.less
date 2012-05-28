@@ -1,0 +1,40 @@
+/* ==== Typography ======================================*/
+
+@basefont: 'Ubuntu', sans-serif;
+@basefontsize: 16px;
+@baseline: 1.5em;
+
+.bodyfont {
+	color: @textcolor;
+	font-family: @basefont;
+	font-size: @basefontsize;
+	font-weight: 300;
+	line-height: @baseline;
+}
+
+.headerfont {
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+}
+
+/* ==== Colours =========================================*/
+
+@textcolor		: #333;
+@linkcolor 		: #027F8D;	  
+
+@lightgrey		: #666;
+@blue			: #247FC4;
+
+// Links
+@linkcolorhover 	: darken(@linkcolor, 10);
+@linkcolorvisited 	: @linkcolorhover;
+@linkcolorfocus 	: darken(@linkcolorhover, 10);
+
+// colour palettes
+@alertcolor 		: rgb(252,248,227);
+@errorcolor 		: rgb(218,79,73);
+@dangercolor 		: rgb(218,79,73);
+@infocolor 			: rgb(217,237,247);
+@inverscolor 		: rgb(65,65,65);
+@successcolor 		: rgb(91,183,91);
+@warningcolor 		: rgb(250,167,50);
