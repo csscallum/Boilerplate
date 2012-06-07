@@ -2,22 +2,41 @@
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-
+/* Small screens */
+@media screen and (max-device-width: 480px), screen and (max-width: 600px) {
+	/* Prevent iOS and Windows Mobile font-size changes */
+	html {
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+	.wrapper {
+		margin: auto;
+		width: 95%;
+	}
+	.row [class*="span"] {
+	    margin-left: 0;
+	    width: 100%;
+	}
 }
 
-@media only screen and (min-width: 768px) {
-
+/* Tablet(-type) devices */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+	.wrapper {
+		margin: auto;
+		width: 95%;
+	}
 }
 
-@media only screen and (min-width: 1140px) {
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
 
 /* ===============
     Maximal Width
    =============== */
 
 	.wrapper {
-		min-width: 978px;
+		min-width: 1000px;
 		margin: auto;
 		max-width: 1400px;
 		width: 85%;
