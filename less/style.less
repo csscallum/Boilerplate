@@ -1,6 +1,6 @@
+@import "variables.less";
 @import "normalize.less";
 @import "scaffolding.less";
-@import "variables.less";
 @import "mixins.less";
 
 /* ===== Primary Styles ========================================================
@@ -13,6 +13,14 @@ body {
 
 /* Header  ========================================================= */
 
+[role="navigation"] {
+	background: @lightgrey;
+	.rounded(4px);
+}
+	[role="navigation"] li {
+		display: inline;
+		margin: 10px 20px;
+	}
 
 /* Footer  ========================================================= */
 

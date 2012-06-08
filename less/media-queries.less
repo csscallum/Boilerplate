@@ -17,6 +17,24 @@
 	    margin-left: 0;
 	    width: 100%;
 	}
+
+
+	[role="navigation"] {
+		padding: 10px 0;
+	}
+		[role="navigation"] li {
+			display: block;
+			margin: 0 10px;
+		}
+			[role="navigation"] a {
+				background: darken(@lightgrey, 10);
+				display: block;
+				margin-bottom: 1px;
+				padding: 5px 10px;
+			}
+			[role="navigation"] a:hover, [role="navigation"] a:focus {
+				background: darken(@lightgrey, 5);
+			}
 }
 
 /* Tablet(-type) devices */
@@ -30,11 +48,6 @@
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-
 	.wrapper {
 		min-width: 980px;
 		margin: auto;

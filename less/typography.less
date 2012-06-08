@@ -1,5 +1,21 @@
 /* Typography =================================================== */
 
+
+a {
+	color: @linkcolor;
+	text-decoration: none;
+	.transition;
+}
+a:hover {
+	color: darken(@linkcolor, 10);	
+}
+a:visited {
+	color: @linkcolorvisited;
+}
+a:focus {
+	color: @linkcolorfocus;
+}
+
 // COPY ========================================================
 
 p {
