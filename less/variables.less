@@ -3,17 +3,19 @@
 @basefont: 'Droid Sans', sans-serif;
 @basefontsize: 16px;
 @baseline: 1.5em;
+@regular: 400;
+@bold: 700;
 
 .bodyfont {
 	color: @textcolor;
 	font-family: @basefont;
 	font-size: @basefontsize;
-	font-weight: 300;
+	font-weight: @regular;
 	line-height: @baseline;
 }
 
 .headerfont {
-	font-weight: 500;
+	font-weight: @regular;
 	text-rendering: optimizelegibility;
 }
 
