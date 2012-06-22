@@ -1,36 +1,49 @@
-@import "variables.less";
-@import "normalize.less";
-@import "scaffolding.less";
+/* =============================================================================
+Boilerplate by Callum Strong	
+Version: 1.0
+URL: https://github.com/csscallum/Boilerplate
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+============================================================================= */
+
+/* Mixins - Setup some handy, resuable snippets ============================= */
 @import "mixins.less";
 
-/* ===== Primary Styles ========================================================
+/* Variables - Establish site wide values =================================== */
+@import "variables.less";
+
+/* Normalize - Start with a nice clean cross browser base =================== */
+@import "normalize.less";
+
+
+/* ===== Primary Global Styles =================================================
    Author: Callum Strong
    ========================================================================== */
 
-body {
+html, body {
 	.bodyfont;
 }
 
-/* Header  ========================================================= */
-
-[role="navigation"] {
-	background: @lightgrey;
-	.rounded(4px);
+body {
+	.font-size(1.3);
 }
-	[role="navigation"] li {
-		display: inline;
-		margin: 10px 20px;
-	}
+
+/* Header  ========================================================= */
 
 /* Footer  ========================================================= */
 
 /* Page Structure - Home =========================================== */
 
-
 /* Page Structure - Further ======================================== */
 
+@media only screen and (min-width: 480px) {
+	@import "scaffolding.less";
+}
 
+/* Typography styling  ====================================================== */
 @import "typography.less";
-@import "media-queries.less";
+
+/* Reuseable helper classes such as IR, Clearfix etc. ======================= */
 @import "helpers.less";
+
+/* Print specific stylesheet ================================================ */
 @import "print.less";
