@@ -15,10 +15,22 @@
 
 	<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
 
-	<link rel="stylesheet/less" href="less/320andup.less">
-	<script src="js/libs/less-1.3.0.min.js"></script>
+	<script src="js/libs/eCSSential.js"></script>
 	
-	<!--<link rel="stylesheet" href="css/320andup.css">-->
+	<script>
+	//note: using a var isn't necessary here. It's useful in this example so we can collect the data
+	var loadCSS = eCSSential({ 
+		"all": "css/all.css",
+		"(min-width: 320px)": "css/320andup.css",
+		"(min-width: 519px)": "css/519andup.css",
+		"(min-width: 760px)": "css/760andup.css",
+		"(min-width: 960px)": "css/960andup.css"
+	});
+	</script>
+	<noscript>
+		<link rel="stylesheet" href="css/all.css">
+		<link rel="stylesheet" href="css/320andup.css">
+	</noscript>
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 	<!--[if lt IE 9]> 
