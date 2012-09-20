@@ -6,16 +6,8 @@
 @regular: 400;
 @bold: 700;
 
-.bodyfont {
-	color: @textcolor;
-	font-family: @basefont;
-	font-size: @basefontsize;
-	font-weight: @regular;
-	line-height: @baseline;
-}
-
-.headerfont {
-	font-weight: @regular;
+.headerfont(@weight) {
+	font-weight: @weight;
 	text-rendering: optimizelegibility;
 }
 
