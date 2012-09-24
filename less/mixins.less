@@ -1,14 +1,21 @@
+/* =============================================================================
+	Mixins
+	========================================================================= */
+
+/* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
 .font-size(@sizeValue){
-  @pxValue: @sizeValue;
-  @remValue: (@sizeValue / 16);
-  font-size: ~"@{pxValue}px";
-  font-size: ~"@{remValue}rem";
+	@pxValue: @sizeValue;
+	@remValue: (@sizeValue / 16);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
 }
+
+/* As with font-size above, do the same with line-height ==================== */
 .line-height(@sizeValue){
-  @pxValue: @sizeValue;
-  @remValue: (@sizeValue / 16);
-  line-height: ~"@{pxValue}px";
-  line-height: ~"@{remValue}rem";
+	@pxValue: @sizeValue;
+	@remValue: (@sizeValue / 16);
+	line-height: ~"@{pxValue}px";
+	line-height: ~"@{remValue}rem";
 }
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
 	background: @color;
