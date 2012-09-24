@@ -39,6 +39,7 @@
 	visibility: hidden;
 }
 
+/* Clearfix which includes IE8 & IE7 fix ==================================== */
 .clearfix() {
 	&:before,
 	&:after {
@@ -49,6 +50,15 @@
 		clear: both;
 	}
 	.lt-ie9 & {
+		zoom: 1;
+	}
+}
+
+/* An inline block mixin which includes IE7 fix ============================= */
+.inline-block() {
+	display: inline-block;
+	.lt-ie8 & {
+		display: inline;
 		zoom: 1;
 	}
 }
