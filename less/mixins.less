@@ -5,7 +5,7 @@
 /* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
 .font-size(@sizeValue){
 	@pxValue: @sizeValue;
-	@remValue: (@sizeValue / 16);
+	@remValue: (@sizeValue / @basefontsize);
 	font-size: ~"@{pxValue}px";
 	font-size: ~"@{remValue}rem";
 }
@@ -13,88 +13,51 @@
 /* As with font-size above, do the same with line-height ==================== */
 .line-height(@sizeValue){
 	@pxValue: @sizeValue;
-	@remValue: (@sizeValue / 16);
+	@remValue: (@sizeValue / @basefontsize);
 	line-height: ~"@{pxValue}px";
 	line-height: ~"@{remValue}rem";
 }
-.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
-	background: @color;
-	background: -webkit-gradient(linear,
-	                           left bottom,
-	                           left top,
-	                           color-stop(0, @start),
-	                           color-stop(1, @stop));
-	background: -ms-linear-gradient(bottom,
-	                              @start,
-	                              @stop);
-	background: -moz-linear-gradient(center bottom,
-	                               @start 0%,
-	                               @stop 100%);
+
+/* Vertical Gradient with solid colour back-up ============================== */
+.gradient(@color: #F5F5F5, @start-color: #EEE, @end-color: #FFF) {
+	background-color: @color;
+	background-repeat: repeat-x;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(@start-color), to(@end-color)); /* Konqueror */
+	background-image: -moz-linear-gradient(@start-color, @end-color); /* FF 3.6+ */
+	background-image: -ms-linear-gradient(@start-color, @end-color); /* IE10 */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start-color), color-stop(100%, @end-color)); /* Safari 4+, Chrome 2+ */
+	background-image: -webkit-linear-gradient(@start-color, @end-color); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(@start-color, @end-color); /* Opera 11.10 */
+	background-image: -ms-linear-gradient(top, @start-color 0%, @end-color 100%); /* IE10+ */
+	background-image: linear-gradient(@start-color, @end-color); /* the standard */
 }
-.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
-	background: @color;
-	background: -webkit-gradient(linear,
-	                           left bottom,
-	                           left top,
-	                           color-stop(0, rgb(@start,@start,@start)),
-	                           color-stop(1, rgb(@stop,@stop,@stop)));
-	background: -ms-linear-gradient(bottom,
-	                              rgb(@start,@start,@start) 0%,
-	                              rgb(@start,@start,@start) 100%);
-	background: -moz-linear-gradient(center bottom,
-	                               rgb(@start,@start,@start) 0%,
-	                               rgb(@stop,@stop,@stop) 100%);
+
+/* Box-shadow complete with vendor prefixes ================================= */
+.box-shadow(@arguments) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
 }
-.bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
-	border-top: solid 1px @top-color;
-	border-left: solid 1px @left-color;
-	border-right: solid 1px @right-color;
-	border-bottom: solid 1px @bottom-color;
-}
-.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
-	-webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-	-moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-	box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-}
-.rounded(@radius: 2px) {
+
+/* Border-radius containing vendor prefixes and background-clip ============= */
+.border-radius(@radius: 52px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
 	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 }
-.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
-	-webkit-border-top-right-radius: @topright;
-	-webkit-border-bottom-right-radius: @bottomright;
-	-webkit-border-bottom-left-radius: @bottomleft;
-	-webkit-border-top-left-radius: @topleft;
-	-moz-border-radius-topright: @topright;
-	-moz-border-radius-bottomright: @bottomright;
-	-moz-border-radius-bottomleft: @bottomleft;
-	-moz-border-radius-topleft: @topleft;
-	border-top-right-radius: @topright;
-	border-bottom-right-radius: @bottomright;
-	border-bottom-left-radius: @bottomleft;
-	border-top-left-radius: @topleft;
-	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
-}
+
+/* Opacity complete with vendor prefixes ==================================== */
 .opacity(@opacity: 0.5) {
 	-moz-opacity: @opacity;
 	-khtml-opacity: @opacity;
 	-webkit-opacity: @opacity;
 	opacity: @opacity;
 }
+
+/* Generic transition animation ============================================= */
 .transition(@duration:0.2s, @ease:ease-out) {
 	-webkit-transition: all @duration @ease;
 	-moz-transition: all @duration @ease;
 	transition: all @duration @ease;
-}
-.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
-	-webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-	-moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-	box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-}
-.box-shadow(@arguments) {
-	-webkit-box-shadow: @arguments;
-	-moz-box-shadow: @arguments;
-	box-shadow: @arguments;
 }
