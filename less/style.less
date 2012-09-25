@@ -17,8 +17,8 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Typography styling ======================================================= */
 @import "typography.less";
 
-/* Grid Structure =========================================================== */
-@import "scaffolding.less";
+/* Grid Structure for small screens ========================================= */
+@import "scaffolding-small.less";
 
 /* ===== Primary Global Styles =================================================
 	Author: Callum Strong
@@ -54,16 +54,19 @@ html, body {
 /* Tablet (Portrait) - Add Styling for tablet devices ======================= */
 @media only screen and (min-width: 32.438em) {
 	@import "519andup.less";
+	@import "scaffolding-tablet-portrait.less";
 }
 
 /* Tablet (Landscape) - Add Styling for tablet devices ====================== */
 @media only screen and (min-width: 47.5em) {
 	@import "760andup.less";
+	@import "scaffolding-tablet-landscape.less";
 }
 
 /* Desktop - Add Styling for desktop computers ============================== */
 @media only screen and (min-width: 60em) {
 	@import "960andup.less";
+	@import "scaffolding-desktop.less";
 }
 
 /* Reuseable helper classes such as IR, Clearfix etc. ======================= */
