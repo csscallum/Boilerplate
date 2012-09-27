@@ -2,6 +2,11 @@
 	Table styling
 	========================================================================= */
 
+@tableHeaderBorder: 	1px solid rgba(0,0,0,.15);
+@tableRowBorder:		1px solid rgba(0,0,0,.1);
+@tableRowBackground:	rgba(0,0,0,.04);
+@tableRowHover:			rgba(0,0,0,.08);
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -12,37 +17,40 @@ table {
 	width: 100%;
 
 	th, td {
-		border-top: 1px solid #DDD;
 		padding: 8px;
 		text-align: left;
 		vertical-align: top;
 	}
 	th {
+		border-bottom: @tableHeaderBorder;
 		font-weight: @bold;
+	}
+	td {
+		border-bottom: @tableRowBorder; 
 	}
 	thead th {
 		vertical-align: bottom;
 	}
+	thead {
+		.font-size(14);
+	}
+	tbody {
+		.font-size(13);
+	}
 }
 
 .table-bordered {
-	border: 1px solid #DDD;
+	border: @tableRowBorder;
 	border-collapse: separate;
 	*border-collapse: collapse;
 	border-left: 0;
 	.border-radius(4px);
 	
 	th,	td {
-		border-left: 1px solid #DDD;
+		border-left: @tableRowBorder;
 	}
 
 	// Prevent a double border
-	caption + thead tr:first-child th,
-	caption + tbody tr:first-child th,
-	caption + tbody tr:first-child td,
-	colgroup + thead tr:first-child th,
-	colgroup + tbody tr:first-child th,
-	colgroup + tbody tr:first-child td,
 	thead:first-child tr:first-child th,
 	tbody:first-child tr:first-child th,
 	tbody:first-child tr:first-child td {
@@ -72,16 +80,14 @@ table {
 }
 
 .table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
-      background-color: rgba(0,0,0,0.04);
-    }
-}
-  tbody {
-    tr:hover td,
-    tr:hover th {
-      background-color: rgba(0,0,0,0.1);
-    }
-  }
+	tbody {
+		tr:nth-child(odd) td,
+		tr:nth-child(odd) th {
+			background-color: @tableRowBackground;
+		}
+    	tr:hover td,
+    	tr:hover th {
+      		background-color: @tableRowHover;
+    	}
+  	}
 }
