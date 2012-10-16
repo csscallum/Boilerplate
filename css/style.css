@@ -32,7 +32,7 @@ table{border-collapse:collapse;border-spacing:0;}
 body,figure{margin:0;}
 legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 a{color:#027f8d;text-decoration:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;transition:all 0.2s ease-out;}
-p,h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,figure,pre,table,fieldset,legend,hr{margin:0 0 1em;}
+p,h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,figure,pre,table,fieldset,legend,hr{margin:0 0 1.5em;}
 p{font-size:13px;font-size:0.8125rem;}
 h1,h2,h3,h4,h5,h6{font-weight:700;text-rendering:optimizelegibility;}
 h1,.h1{margin-bottom:0.75em;}
