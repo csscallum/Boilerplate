@@ -64,7 +64,7 @@ label{font-size:13px;font-size:0.8125rem;}
 .lt-ie9 .form-horizontal .field{zoom:1;}
 .form-horizontal label{display:inline-block;width:220px;}
 html,body{color:#333333;font-family:'Droid Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.5em;}
-.wrapper{margin:0 10px;}
+@-ms-viewport {width:device-width;}.wrapper{margin:0 10px;}
 .row:before,.row:after{content:"";display:table;}
 .row:after{clear:both;}
 .lt-ie9 .row{zoom:1;}

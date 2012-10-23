@@ -50,6 +50,11 @@ html, body {
 /* Page Structure - Further ======================================== */
 
 
+/* Resolve issue in IE10 Windows 8 "Snap Mode" - http://goo.gl/BLXV7 ======== */
+@-ms-viewport{
+    width: device-width;
+}
+
 /* Base grid structure - Small phones (portrait) ============================ */
 @import "scaffolding-small.less";
 
