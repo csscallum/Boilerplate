@@ -17,9 +17,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Typography styling ======================================================= */
 @import "typography.less";
 
-/* Grid Structure for small screens ========================================= */
-@import "scaffolding-small.less";
-
 /* Default styling for tables =============================================== */
 @import "tables.less";
 
@@ -53,6 +50,9 @@ html, body {
 /* Page Structure - Further ======================================== */
 
 
+/* Base grid structure ====================================================== */
+@import "scaffolding-small.less";
+
 /* Large/landscape smartphones, small tablets =============================== */
 @media only screen and (min-width: 32.438em) {
 	@import "519andup.less";
@@ -71,7 +71,7 @@ html, body {
 	@import "scaffolding-desktop.less";
 }
 
-/* Reusable helper classes such as IR, Clearfix etc. ======================= */
+/* Reusable helper classes such as IR, Clearfix etc. ======================== */
 @import "helpers.less";
 
 /* Print specific stylesheet ================================================ */
