@@ -39,6 +39,19 @@ table {
 	}
 }
 
+.table-striped {
+	tbody {
+		tr:nth-child(odd) td,
+		tr:nth-child(odd) th {
+			background-color: @tableRowBackground;
+		}
+    	tr:hover td,
+    	tr:hover th {
+      		background-color: @tableRowHover;
+    	}
+  	}
+}
+
 .table-bordered {
 	border: @tableRowBorder;
 	border-collapse: separate;
@@ -77,17 +90,4 @@ table {
 	tfoot:last-child tr:last-child td:last-child {
 		.border-radius(0 0 4px 0);
 	}
-}
-
-.table-striped {
-	tbody {
-		tr:nth-child(odd) td,
-		tr:nth-child(odd) th {
-			background-color: @tableRowBackground;
-		}
-    	tr:hover td,
-    	tr:hover th {
-      		background-color: @tableRowHover;
-    	}
-  	}
 }
