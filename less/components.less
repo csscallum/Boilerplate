@@ -1,0 +1,22 @@
+/* =============================================================================
+	Components
+	========================================================================= */
+
+// Breadcrumbs for navigation
+.breadcrumb li {
+    display: inline;
+
+	+li:before {
+	    content:"» ";
+	}
+}
+
+
+// Breadcrumbs for path/progress
+.breadcrumb--path li {
+    display: inline;
+
+	+li:before {
+	    content:"/ ";
+	}
+}

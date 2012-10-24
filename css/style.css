@@ -71,6 +71,8 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 select{background-color:#ffffff;border:1px solid #dddddd;width:220px;}
 select[multiple],select[size]{height:auto;}
 .form-horizontal label{display:inline-block;padding-right:2%;text-align:right;width:25%;}
+.breadcrumb li{display:inline;}.breadcrumb li+li:before{content:"» ";}
+.breadcrumb--path li{display:inline;}.breadcrumb--path li+li:before{content:"/ ";}
 html,body{color:#333333;font-family:'Droid Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.5em;}
 @-ms-viewport {width:device-width;}.wrapper{margin:0 10px;}
 .row:before,.row:after{content:"";display:table;}
