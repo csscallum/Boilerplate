@@ -4,6 +4,8 @@
 
 @inputBorder:		#DDD;
 @inputBackground:	#FFF;
+@inputWidth:		220px;
+@labelWidth:		180px;
 
 fieldset {
 	border: 0;
@@ -19,13 +21,13 @@ legend {
 	width: 100%;
 }
 
-.field, .actions {
+.field, .radio, .actions {
 	.clearfix();
 	margin-bottom: @baseline;
 }
 
 .actions {
-	padding-left: 25%;
+	padding-left: @labelWidth + 10px;
 }
 
 label,
@@ -52,7 +54,7 @@ input[type="tel"] {
 
 input,
 textarea {
-	width: 206px; // plus 12px padding and 2px border
+	width: @inputWidth;
 }
 
 textarea,
@@ -82,7 +84,7 @@ input[type="checkbox"] {
 	cursor: pointer;
 	line-height: normal;
 	margin-top: 1px \9; /* IE8-9 */
-	margin: 4px 0 0;
+	margin: 7px 0 0;
 }
 
 // Reset width of input images, buttons, radios, checkboxes
@@ -100,7 +102,7 @@ input[type="checkbox"] {
 select {
 	background-color: @inputBackground; // Chrome on Linux and Mobile Safari need background-color
 	border: 1px solid @inputBorder;
-	width: 220px; // default input width + 10px of padding that doesn't get applied
+	width: @inputWidth;
 }
 
 // Make multiple select elements height not fixed
@@ -112,8 +114,35 @@ select[size] {
 .form-horizontal {
 	label {
 		display: inline-block;
-		padding-right: 2%;
+		margin-right: 10px;
 		text-align: right;
-		width: 25%;
+		width: @labelWidth;
+	}
+}
+
+.checkbox, .radio {
+	padding-left: @labelWidth + 10px;
+
+	input[type="checkbox"] {
+		float: left;
+		margin-right: 4px;
+	}
+	label {
+		text-align: left;
+		width: auto;
+	}
+}
+
+.checkbox--list,
+.radio--list {
+	.option {
+		input {
+			display: inline;
+			margin-left: @labelWidth + 10px;
+		}
+		label {
+			text-align: left;
+			width: auto;
+		}
 	}
 }
