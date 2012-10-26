@@ -2,21 +2,23 @@
 	Sprite
 	========================================================================= */
 
-// Declare image path and grid size of sprite
+/* Declare image path and grid size of sprite =============================== */
 @sprite-image:		url(../img/sprite.png);
 @sprite-grid:		16px;
+@x:					1;
+@y:					1;
 
 .sprite-image(@sprite-image:@sprite-image) {
 	background-image: url(@sprite-image);
 	background-repeat: no-repeat;
 }
 
-// background-position calculation based on grid reference
+/* background-position calculation based on grid ============================ */
 .sprite-position(@x, @y, @sprite-grid:@sprite-grid) {
 	background-position: -(@x*@sprite-grid*1px) -(@y*@sprite-grid*1px);
 }
 
-// Declare x and y grid reference on element
+/* Declare x and y grid reference on element ================================ */
 .sprite(@x, @y) {
 	.sprite-image(@sprite-image);
 	.sprite-position(@x, @y, @sprite-grid);
