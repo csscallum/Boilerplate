@@ -1,0 +1,38 @@
+/* =============================================================================
+Boilerplate by Callum Strong
+Version: 0.0.9
+URL: https://github.com/csscallum/Boilerplate
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+============================================================================= */
+/* Mixins - Setup some handy, resuable snippets ============================= */
+/* =============================================================================
+	Mixins
+	========================================================================= */
+/* Variables - Establish site wide values =================================== */
+/* Normalize - Start with a nice clean cross browser base =================== */
+/* Typography styling ======================================================= */
+/* Default styling for tables =============================================== */
+/* Default styling for forms ================================================ */
+/* Lightweight snippets for common components =============================== */
+/* Manage your sprite with ease ============================================= */
+/* ===== Primary Global Styles =================================================
+	Author: Callum Strong
+	========================================================================= */
+/* =============================================================================
+   Reusable assets
+   ========================================================================== */
+/* Header  ========================================================= */
+/* Footer  ========================================================= */
+/* Page Structure - Home =========================================== */
+/* Page Structure - Further ======================================== */
+/* Resolve issue in IE10 Windows 8 "Snap Mode" - http://goo.gl/BLXV7 ======== */
+@-ms-viewport {
+  width: device-width; }
+
+/* Base grid structure - Small phones (portrait) ============================ */
+/* Large/landscape smartphones, small tablets =============================== */
+/* Tablet (Portrait) - Add Styling for tablet devices ======================= */
+/* Desktop/Tablet (landscape) - Add Styling for desktop computers =========== */
+/* Large Desktop - Add Styling for large desktop computers ================== */
+/* Reusable helper classes such as IR, Clearfix etc. ======================== */
+/* Print specific stylesheet ================================================ */
