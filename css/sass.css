@@ -1,171 +1,84 @@
-/* =============================================================================
-Boilerplate by Callum Strong
-Version: 0.0.9
-URL: https://github.com/csscallum/Boilerplate
-Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
-============================================================================= */
-/* Mixins - Setup some handy, resuable snippets ============================= */
-/* =============================================================================
-	Mixins
-	========================================================================= */
-/* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
-/* As with font-size above, do the same with line-height ==================== */
-/* Vertical Gradient with solid colour back-up ============================== */
-/* Box-shadow complete with vendor prefixes ================================= */
-/* Border-radius containing vendor prefixes and background-clip ============= */
-/* Opacity complete with vendor prefixes ==================================== */
-/* Generic transition animation ============================================= */
-/* Variables - Establish site wide values =================================== */
-/* =============================================================================
-	Variables
-	========================================================================= */
-/* Typography =============================================================== */
-/* Branding ================================================================= */
-/* Normalize - Start with a nice clean cross browser base =================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
-  display: block; }
+/*
+Syntax error: 0.8125/px isn't a valid CSS value.
+        on line 10 of sass/_mixins.scss, in `font-size'
+        from line 21 of sass/_typography.scss
+        from line 18 of sass/style.scss
 
-audio, canvas, video {
-  display: inline-block; }
+5: Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+6: ============================================================================= */
+7: 
+8: /* Mixins - Setup some handy, resuable snippets ============================= */
+9: @import "mixins";
+10: 
+11: /* Variables - Establish site wide values =================================== */
+12: @import "variables";
+13: 
+14: /* Normalize - Start with a nice clean cross browser base =================== */
+15: @import "normalize";
 
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-[hidden] {
-  display: none; }
-
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:active, a:hover {
-  outline: 0; }
-
-h1 {
-  font-size: 2em; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b, strong {
-  font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-code, kbd, pre, samp {
-  font-family: monospace, serif;
-  font-size: 1em; }
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-q {
-  quotes: \201C \201D \2018 \2019; }
-
-small {
-  font-size: 80%; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  border: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: .35em .625em .75em; }
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0; }
-
-button, input {
-  line-height: normal; }
-
-button, html input[type=button],
-input[type=reset], input[type=submit] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled], input[disabled] {
-  cursor: default; }
-
-input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
-  padding: 0; }
-
-input[type=search] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-textarea {
-  overflow: auto;
-  vertical-align: top; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body, figure {
-  margin: 0; }
-
-legend, button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-/* Typography styling ======================================================= */
-/* Default styling for tables =============================================== */
-/* Default styling for forms ================================================ */
-/* Lightweight snippets for common components =============================== */
-/* Manage your sprite with ease ============================================= */
-/* ===== Primary Global Styles =================================================
-	Author: Callum Strong
-	========================================================================= */
-/* =============================================================================
-   Reusable assets
-   ========================================================================== */
-/* Header  ========================================================= */
-/* Footer  ========================================================= */
-/* Page Structure - Home =========================================== */
-/* Page Structure - Further ======================================== */
-/* Resolve issue in IE10 Windows 8 "Snap Mode" - http://goo.gl/BLXV7 ======== */
-@-ms-viewport {
-  width: device-width; }
-
-/* Base grid structure - Small phones (portrait) ============================ */
-/* Large/landscape smartphones, small tablets =============================== */
-/* Tablet (Portrait) - Add Styling for tablet devices ======================= */
-/* Desktop/Tablet (landscape) - Add Styling for desktop computers =========== */
-/* Large Desktop - Add Styling for large desktop computers ================== */
-/* Reusable helper classes such as IR, Clearfix etc. ======================== */
-/* Print specific stylesheet ================================================ */
+Backtrace:
+sass/_mixins.scss:10:in `font-size'
+sass/_typography.scss:21
+sass/style.scss:18
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/number.rb:266:in `to_s'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/literal.rb:128:in `plus'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/number.rb:101:in `plus'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/operation.rb:90:in `_perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block (3 levels) in visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block (2 levels) in visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block in visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:68:in `perform_arguments'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:259:in `visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `block in visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:224:in `visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:298:in `block in watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: 0.8125/px isn't a valid CSS value.\A         on line 10 of sass/_mixins.scss, in `font-size'\A         from line 21 of sass/_typography.scss\A         from line 18 of sass/style.scss\A \A 5: Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0\A 6: ============================================================================= */\A 7: \A 8: /* Mixins - Setup some handy, resuable snippets ============================= */\A 9: @import \"mixins\";\A 10: \A 11: /* Variables - Establish site wide values =================================== */\A 12: @import \"variables\";\A 13: \A 14: /* Normalize - Start with a nice clean cross browser base =================== */\A 15: @import \"normalize\";"; }

@@ -3,15 +3,15 @@
 	========================================================================= */
 
 /* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
-@mixin font-size($sizeValue){
+@mixin font-size($sizeValue) {
 	$pxValue: $sizeValue;
-	$remValue: ($sizeValue / $basefontsize);
+	$remValue: $sizeValue/$basefontsize;
 	font-size: ($pxValue) + px;
 	font-size: ($remValue) + rem;
 }
 
 /* As with font-size above, do the same with line-height ==================== */
-@mixin line-height($sizeValue){
+@mixin line-height($sizeValue) {
 	$pxValue: $sizeValue;
 	$remValue: ($sizeValue / $basefontsize);
 	line-height: ($pxValue) + px;
