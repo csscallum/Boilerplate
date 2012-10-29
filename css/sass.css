@@ -8,6 +8,13 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* =============================================================================
 	Mixins
 	========================================================================= */
+/* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
+/* As with font-size above, do the same with line-height ==================== */
+/* Vertical Gradient with solid colour back-up ============================== */
+/* Box-shadow complete with vendor prefixes ================================= */
+/* Border-radius containing vendor prefixes and background-clip ============= */
+/* Opacity complete with vendor prefixes ==================================== */
+/* Generic transition animation ============================================= */
 /* Variables - Establish site wide values =================================== */
 /* Normalize - Start with a nice clean cross browser base =================== */
 /* Typography styling ======================================================= */
