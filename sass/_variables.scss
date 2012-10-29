@@ -1,0 +1,25 @@
+/* =============================================================================
+	Variables
+	========================================================================= */
+
+/* Typography =============================================================== */
+
+$basefont: 'Droid Sans', sans-serif;
+$basefontsize: 16px;
+$baseline: 1.5em;
+$regular: 400;
+$bold: 700;
+
+
+/* Branding ================================================================= */
+
+$textcolor		: #333;
+$linkcolor 		: #027F8D;
+
+$selection		: $linkcolor;
+$selectionText	: #FFF;
+
+// Links
+$linkcolorhover 	: darken($linkcolor, 10);
+$linkcolorvisited 	: $linkcolorhover;
+$linkcolorfocus 	: darken($linkcolorhover, 10);
