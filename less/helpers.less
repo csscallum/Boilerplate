@@ -50,8 +50,8 @@ img {
 	visibility: hidden;
 }
 
-/* Clearfix which includes IE8 & IE7 fix ==================================== */
-.clearfix() {
+/* Clearfix ================================================================= */
+.cf() {
 	&:before,
 	&:after {
 		content: "";
@@ -59,9 +59,6 @@ img {
 	}
 	&:after {
 		clear: both;
-	}
-	.lt-ie9 & {
-		zoom: 1;
 	}
 }
 
