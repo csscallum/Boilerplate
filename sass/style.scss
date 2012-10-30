@@ -20,6 +20,9 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Default styling for tables =============================================== */
 @import "tables";
 
+/* Reusable helper classes such as IR, Clearfix etc. ======================== */
+@import "helpers";
+
 /* Default styling for forms ================================================ */
 @import "forms";
 
@@ -32,6 +35,14 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* ===== Primary Global Styles =================================================
 	Author: Callum Strong
 	========================================================================= */
+
+html, body {
+	color: $textcolor;
+	font-family: $basefont;
+	font-size: 16px;
+	font-weight: $regular;
+	line-height: $baseline;
+}
 
 
 /* =============================================================================
@@ -59,25 +70,25 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Large/landscape smartphones, small tablets =============================== */
 @media only screen and (min-width: 32.438em) {
 	@import "519andup";
+	@import "scaffolding-tablet-portrait";
 }
 
 /* Tablet (Portrait) - Add Styling for tablet devices ======================= */
 @media only screen and (min-width: 47.5em) {
 	@import "760andup";
+	@import "scaffolding-tablet-landscape";
 }
 
 /* Desktop/Tablet (landscape) - Add Styling for desktop computers =========== */
 @media only screen and (min-width: 60em) {
 	@import "960andup";
+	@import "scaffolding-desktop";
 }
 
 /* Large Desktop - Add Styling for large desktop computers ================== */
 @media only screen and (min-width: 86.375em) {
 	@import "1382andup";
 }
-
-/* Reusable helper classes such as IR, Clearfix etc. ======================== */
-@import "helpers";
 
 /* Print specific stylesheet ================================================ */
 @import "print";
