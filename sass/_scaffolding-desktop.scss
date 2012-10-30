@@ -1,0 +1,55 @@
+/* =============================================================================
+	Scaffolding - Desktop: 12 column with IE width fix
+	========================================================================= */
+
+.wrapper {
+	margin: auto;
+	width: 85%
+}
+
+.row [class*="dt-"] {
+	display: block;
+	float: left;
+	margin-left: 2.564102564102564%;
+	min-height: 30px;
+	width: 100%;
+}
+.row [class*="dt-"]:first-child {
+	margin-left: 0;
+}
+.row .dt-12 {
+    width: 100%;
+}
+.row .dt-11 {
+    width: 91.45299145299145%;
+}
+.row .dt-10 {
+    width: 82.90598290598291%;
+}
+.row .dt-9 {
+    width: 74.35897435897436%;
+}
+.row .dt-8 {
+    width: 65.81196581196582%;
+}
+.row .dt-7 {
+    width: 57.26495726495726%;
+}
+.row .dt-6 {
+    width: 48.717948717948715%;
+}
+.row .dt-5 {
+    width: 40.17094017094017%;
+}
+.row .dt-4 {
+    width: 31.623931623931625%;
+}
+.row .dt-3 {
+    width: 23.076923076923077%;
+}
+.row .dt-2 {
+    width: 14.52991452991453%;
+}
+.row .dt-1 {
+    width: 5.982905982905983%;
+}
