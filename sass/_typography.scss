@@ -8,8 +8,6 @@ a {
 	@include transition;
 }
 
-
-
 /* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
 p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
 	margin: 0 0 $baseline;
@@ -24,7 +22,7 @@ p {
 /* Headings ================================================================= */
 
 h1, h2, h3, h4, h5, h6 {
-	@include headerfont;
+	font-family: $headerfont;
 }
 
 h1, .h1 {
