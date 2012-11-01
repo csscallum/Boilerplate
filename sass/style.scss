@@ -65,28 +65,25 @@ html, body {
 }
 
 /* Base grid structure - Small phones (portrait) ============================ */
-@import "scaffolding-small";
+@import "scaffolding";
 
 /* Large/landscape smartphones, small tablets =============================== */
-@media only screen and (min-width: 32.438em) {
+@media only screen and (min-width: $tablet-small) {
 	@import "519andup";
-	@import "scaffolding-tablet-portrait";
 }
 
 /* Tablet (Portrait) - Add Styling for tablet devices ======================= */
-@media only screen and (min-width: 47.5em) {
+@media only screen and (min-width: $tablet) {
 	@import "760andup";
-	@import "scaffolding-tablet-landscape";
 }
 
 /* Desktop/Tablet (landscape) - Add Styling for desktop computers =========== */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: $desktop-small) {
 	@import "960andup";
-	@import "scaffolding-desktop";
 }
 
 /* Large Desktop - Add Styling for large desktop computers ================== */
-@media only screen and (min-width: 86.375em) {
+@media only screen and (min-width: $desktop-large) {
 	@import "1382andup";
 }
 

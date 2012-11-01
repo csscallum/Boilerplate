@@ -2,15 +2,22 @@
 	Variables
 	========================================================================= */
 
+/* Media Queries ============================================================ */
+
+$tablet-small	: 32.438em; // Large/landscape smartphones, small tablets
+$tablet			: 47.5em;	// Tablet (Portrait) - Add Styling for tablet devices
+$desktop-small	: 60em;		// Desktop/Tablet (landscape) - Add Styling for desktop computers
+$desktop-large	: 86.375em;	// Large Desktop - Add Styling for large desktop computers
+
 /* Typography =============================================================== */
 
-$basefont: 'Droid Sans', sans-serif;
-$basefontsize: 16; //px
-$baseline: 1.5em;
-$regular: 400;
-$bold: 700;
+$basefont 			: 'Droid Sans', sans-serif;
+$basefontsize 		: 16; //px
+$baseline			: 1.5em;
+$regular			: 400;
+$bold				: 700;
 
-$headerfont: 'Droid Sans', sans-serif;
+$headerfont			: 'Droid Sans', sans-serif;
 
 /* Branding ================================================================= */
 
