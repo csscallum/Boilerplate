@@ -111,12 +111,14 @@ select[size] {
 	height: auto;
 }
 
-.form-horizontal {
-	label {
-		display: inline-block;
-		margin-right: 10px;
-		text-align: right;
-		width: $labelWidth;
+@media only screen and (min-width: $tablet) {
+	.form-horizontal {
+		label {
+			display: inline-block;
+			margin-right: 10px;
+			text-align: right;
+			width: $labelWidth;
+		}
 	}
 }
 
