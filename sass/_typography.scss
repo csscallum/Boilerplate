@@ -15,7 +15,9 @@ p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, leg
 
 /* Copy ===================================================================== */
 
-p {
+[role="main"] p,
+[role="main"] ul,
+[role="main"] ol, {
 	@include font-size(13);
 }
 
