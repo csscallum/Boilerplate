@@ -56,10 +56,10 @@
 }
 /* Border-radius containing vendor prefixes and background-clip ============= */
 @mixin border-radius($radius: 5px) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
 	border-radius: $radius;
-	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 }
 
 /* Opacity complete with vendor prefixes ==================================== */
