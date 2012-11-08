@@ -14,6 +14,25 @@
 	line-height: ($sizeValue/$basefontsize) + rem;
 }
 
+/* Calculate fluid ratio based on two dimensions (width/height) - http://goo.gl/Wl694
+   | This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px:
+   | @include fluid-ratio(800px 200px, 300px 150px); */
+@mixin fluid-ratio($large-size, $small-size) {
+	$width-large: nth($large-size, 1);
+	$width-small: nth($small-size, 1);
+	$height-large: nth($large-size, 2);
+	$height-small: nth($small-size, 2);
+	$slope: ($height-large - $height-small) / ($width-large - $width-small);
+	$height: $height-small - $width-small * $slope;
+
+	height: $height;
+	padding-top: $slope * 100%;
+
+	-moz-background-size: cover;  /* Firefox 3.6 */
+	background-size: cover;
+	background-position: center;  /* Internet Explorer 7/8 */
+}
+
 /* Generic vendor-prefix mixin "@include vendor(box-sizing, border-box)" ==== */
 @mixin vendor($property, $value){
     -webkit-#{$property}:$value;
@@ -27,10 +46,8 @@
 @mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
 	background-color: $color;
 	background-repeat: repeat-x;
-	background-image: -khtml-gradient(linear, left top, left bottom, from($start-color), to($end-color)); /* Konqueror */
 	background-image: -moz-linear-gradient($start-color, $end-color); /* FF 3.6+ */
 	background-image: -ms-linear-gradient($start-color, $end-color); /* IE10 */
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start-color), color-stop(100%, $end-color)); /* Safari 4+, Chrome 2+ */
 	background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+ */
 	background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
 	background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%); /* IE10+ */
@@ -54,7 +71,7 @@
   box-shadow: $params;
 
 }
-/* Border-radius containing vendor prefixes and background-clip ============= */
+/* Border-radius with background-clip ======================================= */
 @mixin border-radius($radius: 5px) {
 	border-radius: $radius;
 	-moz-background-clip: padding;
