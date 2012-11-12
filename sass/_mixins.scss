@@ -28,7 +28,7 @@
 	height: $height;
 	padding-top: $slope * 100%;
 
-	-moz-background-size: cover;  /* Firefox 3.6 */
+	-moz-background-size: cover;
 	background-size: cover;
 	background-position: center;  /* Internet Explorer 7/8 */
 }
