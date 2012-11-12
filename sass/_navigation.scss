@@ -1,0 +1,60 @@
+/* =============================================================================
+	Navigation
+	========================================================================= */
+
+.logo {
+	display: inline-block;
+	float: left;
+	padding: 1em;
+}
+
+a.menu-link {
+	display: block;
+	float: right;
+	padding: 1em;
+}
+
+.js nav[role=navigation] {
+	max-height: 0;
+	overflow: hidden;
+}
+nav[role=navigation] {
+	clear: both;
+	@include transition;
+
+	&.active {
+		max-height: 15em;
+	}
+	ul {
+		border-top: 1px solid #808080;
+		margin: 0 0 $baseline 0;
+		padding: 0;
+	}
+	li a {
+		border-bottom: 1px solid #808080;
+		display: block;
+		padding: 0.8em;
+	}
+}
+
+@media screen and (min-width: $desktop-small) {
+	a.menu-link {
+		display: none;
+	}
+	.js nav[role=navigation] {
+		clear: none;
+		max-height: none;
+	}
+	nav[role=navigation] {
+		ul {
+			border: 0;
+			float: right;
+		}
+		li {
+			display: inline-block;
+		}
+		li a {
+			border: 0;
+		}
+	}
+}
