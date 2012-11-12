@@ -7,7 +7,7 @@
     display: inline;
 
 	+li:before {
-	    content:"» ";
+	    content:"\00BB ";
 	}
 }
 
