@@ -18,11 +18,17 @@ $regular			: 400;
 $bold				: 700;
 
 $headerfont			: 'Droid Sans', sans-serif;
+$seriffont 			: Georgia, serif;
 
 /* Branding ================================================================= */
 
-$textcolor		: #333;
-$linkcolor 		: #027F8D;
+$primary 		: #45281D;
+$secondary 		: #9BB854;
+$alt1 			: #C8D172;
+$alt2 			: #9FAC40;
+
+$textcolor		: $primary;
+$linkcolor 		: $secondary;
 
 $selection		: $linkcolor;
 $selectionText	: #FFF;
