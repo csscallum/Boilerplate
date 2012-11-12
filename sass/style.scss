@@ -17,14 +17,20 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 /* Normalize - Start with a nice clean cross browser base =================== */
 @import "normalize";
 
+/* Reusable helper classes such as IR, Clearfix etc. ======================== */
+@import "helpers";
+
 /* Typography styling ======================================================= */
 @import "typography";
 
+/* Responsive navigation ==================================================== */
+@import "navigation";
+
+/* Button styles ============================================================ */
+@import "buttons";
+
 /* Default styling for tables =============================================== */
 @import "tables";
-
-/* Reusable helper classes such as IR, Clearfix etc. ======================== */
-@import "helpers";
 
 /* Default styling for forms ================================================ */
 @import "forms";
@@ -47,11 +53,17 @@ html, body {
 	line-height: $baseline;
 }
 
-
 /* =============================================================================
    Reusable assets
    ========================================================================== */
 
+.gr {
+	background: $secondary;
+	color: #FFF;
+	margin-bottom: $baseline;
+	padding: 1em;
+	text-align: center;
+}
 
 /* Header  ========================================================= */
 
