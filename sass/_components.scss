@@ -34,3 +34,50 @@
 		margin-left: 22%; /* dt width + a little margin for spacing */
 	}
 }
+
+// Base Tabs structure
+.tabs {
+	margin-bottom: $baseline;
+
+	> ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			border: 1px solid #CCC;
+			display: inline-block;
+			list-style: none;
+			&.active {
+				border-bottom-color: #FFF;
+			}
+		}
+		a {
+			display: block;
+			padding: $baseline / 2;
+		}
+	}
+	> div {
+		border: 1px solid #CCC;
+		margin-top: -1px;
+		padding: $baseline / 2;
+	}
+}
+
+// Full width tabs with fluid widths
+.tabs--full-width {
+	> ul {
+		display: table;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+
+		li {
+			display: table-cell;
+			text-align: center;
+			margin-left: $baseline / 2;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
