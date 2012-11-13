@@ -2,7 +2,7 @@
 
 /* =============================================================================
 Boilerplate by Callum Strong
-Version: 0.0.9
+Version: 0.2.4
 URL: https://github.com/csscallum/Boilerplate
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 ============================================================================= */
@@ -48,7 +48,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 html, body {
 	color: $textcolor;
 	font-family: $basefont;
-	font-size: 16px;
+	font-size: $basefontsize;
 	font-weight: $regular;
 	line-height: $baseline;
 }
@@ -78,7 +78,7 @@ html, body {
     width: device-width;
 }
 
-/* Base grid structure - Small phones (portrait) ============================ */
+/* Base grid structure ====================================================== */
 @import "scaffolding";
 
 /* Large/landscape smartphones, small tablets =============================== */
