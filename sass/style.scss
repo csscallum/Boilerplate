@@ -65,6 +65,11 @@ html, body {
 	text-align: center;
 }
 
+.fluid {
+	background-image: url(http://farm8.staticflickr.com/7236/7319702026_8a9da614b9_h.jpg);
+	@include fluid-ratio(800px 300px, 300px 150px);
+}
+
 /* Header  ========================================================= */
 
 /* Footer  ========================================================= */
