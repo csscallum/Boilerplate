@@ -7,27 +7,14 @@ $inputBackground:	#FFF;
 $inputWidth:		220px;
 $labelWidth:		180px;
 
-fieldset {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-legend {
-	border: 0;
-	border-bottom: 1px solid #e5e5e5;
-	display: block;
-	padding: 0;
-	width: 100%;
-}
-
-.field, .radio, .actions {
-	@include cf;
+.form header {
+	border-bottom: 1px solid $inputBorder;
 	margin-bottom: $baseline;
 }
 
-.actions {
-	padding-left: $labelWidth + 10px;
+.field {
+	@include cf;
+	margin-bottom: $baseline;
 }
 
 label,
@@ -111,40 +98,42 @@ select[size] {
 	height: auto;
 }
 
+.actions {
+	margin-bottom: $baseline;
+}
+
 @media only screen and (min-width: $tablet) {
-	.form-horizontal {
+	.form--horizontal {
 		label {
 			display: inline-block;
 			margin-right: 10px;
-			text-align: right;
+			vertical-align: top;
 			width: $labelWidth;
 		}
-	}
-}
-
-.checkbox, .radio {
-	padding-left: $labelWidth + 10px;
-
-	input[type="checkbox"] {
-		float: left;
-		margin-right: 4px;
-	}
-	label {
-		text-align: left;
-		width: auto;
-	}
-}
-
-.checkbox--list,
-.radio--list {
-	.option {
-		input {
-			display: inline;
-			margin-left: $labelWidth + 10px;
+		.input {
+			display: inline-block;
 		}
+	}
+	.actions {
+		padding-left: $labelWidth + 10px;
+	}
+}
+@media only screen and (min-width: $desktop-small) {
+	.form--horizontal {
 		label {
-			text-align: left;
-			width: auto;
+			text-align: right;
 		}
+	}
+}
+
+.field--radio .input label,
+.field--checkbox-list .input label,
+.field--radio-list .input label {
+	margin: 0 5px 0 $baseline;
+	text-align: left;
+	width: auto;
+
+	&:first-child {
+		margin-left: 0;
 	}
 }
