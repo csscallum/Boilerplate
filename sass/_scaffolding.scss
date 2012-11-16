@@ -2,49 +2,22 @@
 	Scaffolding
 	========================================================================= */
 
-$one-sixth 		: 16.666%;
-$one-quarter 	: 25%;
-$one-third 		: 33.333%;
-$one-half 		: 50%;
-$two-thirds 	: 66.666%;
-$five-sixths	: 83.333%;
-$three-quarters : 75%;
+$gutter: 2%;
+
+@mixin col($cols, $span) {
+	width: ( (100/$cols) * $span) - ( ( ((100 / ((100/$cols) * $span)) - 1) * $gutter ) / ( $cols / $span ) )
+}
 
 .wrapper {
 	margin: 0 10px;
 }
 
-.gr {
-	float: left;
-	width: 100%;
-}
-
-.one-whole 		{ width: 100%; }
-.one-half 		{ width: $one-half; }
-
-.one-third 		{ width: $one-third; }
-.two-thirds 	{ width: $two-thirds; }
-
-.one-quarter 	{ width: $one-quarter; }
-.two-quarters 	{ width: $one-half; }
-.three-quarters { width: 75%; }
-
 @media only screen and (min-width: $tablet-small) {
-	.one-sixth      { width: $one-sixth; }
-	.two-sixths     { width: $one-third; }
-	.three-sixths   { width: $one-half; }
-	.four-sixths    { width: $two-thirds; }
-	.five-sixths    { width: $five-sixths; }
+
 }
 
 @media only screen and (min-width: $tablet) {
-	.one-eighth     { width: 12.5%; }
-	.two-eighths    { width: $one-quarter; }
-	.three-eighths  { width: 37.5%; }
-	.four-eighths   { width: $one-half; }
-	.five-eighths   { width: 62.5%; }
-	.six-eighths    { width: $three-quarters; }
-	.seven-eighths  { width: 87.5%; }
+
 }
 
 @media only screen and (min-width: $desktop-small) {
@@ -52,16 +25,52 @@ $three-quarters : 75%;
 		margin: auto;
 		width: 85%
 	}
-
-	.one-twelfth 		{ width: 8.333%; }
-	.two-twelfths 		{ width: $one-sixth; }
-	.three-twelfths 	{ width: $one-quarter; }
-	.four-twelfths 		{ width: $one-third; }
-	.five-twelfths 		{ width: 41.666% }
-	.six-twelfths 		{ width: $one-half; }
-	.seven-twelfths 	{ width: 58.333%; }
-	.eight-twelfths 	{ width: $two-thirds; }
-	.nine-twelfths 		{ width: $three-quarters; }
-	.ten-twelfths 		{ width: $five-sixths; }
-	.eleven-twelfths 	{ width: 91.666%; }
+	[class*="dt-"] {
+		display: block;
+		float: left;
+		margin-left: $gutter;
+	}
+	[class*="dt-"]:first-child,
+	.alpha,
+	.dt-12 {
+		clear: left;
+		margin-left: 0;
+	}
+	.dt-12 {
+		width: 100%;
+		float: none;
+	}
+	.dt-11 {
+	    @include col(12, 11);
+	}
+	.dt-10 {
+	    @include col(12, 10);
+	}
+	.dt-9 {
+	    @include col(12, 9);
+	}
+	.dt-8 {
+	    @include col(12, 8);
+	}
+	.dt-7 {
+	    @include col(12, 7);
+	}
+	.dt-6 {
+	    @include col(12, 6);
+	}
+	.dt-5 {
+		@include col(12, 5);
+	}
+	.dt-4 {
+		@include col(12, 4);
+	}
+	.dt-3 {
+		@include col(12, 3);
+	}
+	.dt-2 {
+		@include col(12, 2);
+	}
+	.dt-1 {
+		@include col(12, 1);
+	}
 }
