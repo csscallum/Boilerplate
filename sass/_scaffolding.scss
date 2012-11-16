@@ -37,26 +37,26 @@ $gutter: 2%;
 		margin-left: 0;
 	}
 	.dt-12 {
-		width: 100%;
 		float: none;
+		width: 100%;
 	}
 	.dt-11 {
-	    @include col(12, 11);
+		@include col(12, 11);
 	}
 	.dt-10 {
-	    @include col(12, 10);
+		@include col(12, 10);
 	}
 	.dt-9 {
-	    @include col(12, 9);
+		@include col(12, 9);
 	}
 	.dt-8 {
-	    @include col(12, 8);
+		@include col(12, 8);
 	}
 	.dt-7 {
-	    @include col(12, 7);
+		@include col(12, 7);
 	}
 	.dt-6 {
-	    @include col(12, 6);
+		@include col(12, 6);
 	}
 	.dt-5 {
 		@include col(12, 5);
