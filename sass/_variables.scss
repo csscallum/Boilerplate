@@ -13,14 +13,14 @@ $desktop-large	: 86.375em;	// Large Desktop - Add Styling for large desktop comp
 
 /* Typography =============================================================== */
 
-$basefont 			: 'Droid Sans', sans-serif;
+$basefont 			: sans-serif;
 $basefontsize 		: 16; //px
 $baseline			: 1.5em;
 $regular			: 400;
 $bold				: 700;
 
-$headerfont			: 'Droid Sans', sans-serif;
 $seriffont 			: Georgia, serif;
+$headerfont			: $seriffont;
 
 /* Branding ================================================================= */
 
