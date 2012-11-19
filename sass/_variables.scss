@@ -39,3 +39,9 @@ $selectionText	: #FFF;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited 	: $linkcolorhover;
 $linkcolorfocus 	: darken($linkcolorhover, 10);
+
+/* Common globals for errors or successes =================================== */
+$error 			: #F29DA8;
+$warning 		: #FAE4B8;
+$success 		: #9FD392;
+$information 	: #6EBDE5;
