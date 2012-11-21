@@ -1,36 +1,36 @@
 /* =============================================================================
-	Mixins
-	========================================================================= */
+    Mixins
+    ========================================================================= */
 
 /* Font Sizing using rem's - http://goo.gl/4ow8e ============================ */
 @mixin font-size($sizeValue) {
-	font-size: $sizeValue+px;
-	font-size: ($sizeValue/$basefontsize) + rem;
+    font-size: $sizeValue+px;
+    font-size: ($sizeValue/$basefontsize) + rem;
 }
 
 /* As with font-size above, do the same with line-height ==================== */
 @mixin line-height($sizeValue) {
-	line-height: $sizeValue+px;
-	line-height: ($sizeValue/$basefontsize) + rem;
+    line-height: $sizeValue+px;
+    line-height: ($sizeValue/$basefontsize) + rem;
 }
 
 /* Calculate fluid ratio based on two dimensions (width/height) - http://goo.gl/Wl694
    | This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px:
    | @include fluid-ratio(800px 200px, 300px 150px); */
 @mixin fluid-ratio($large-size, $small-size) {
-	$width-large: nth($large-size, 1);
-	$width-small: nth($small-size, 1);
-	$height-large: nth($large-size, 2);
-	$height-small: nth($small-size, 2);
-	$slope: ($height-large - $height-small) / ($width-large - $width-small);
-	$height: $height-small - $width-small * $slope;
+    $width-large: nth($large-size, 1);
+    $width-small: nth($small-size, 1);
+    $height-large: nth($large-size, 2);
+    $height-small: nth($small-size, 2);
+    $slope: ($height-large - $height-small) / ($width-large - $width-small);
+    $height: $height-small - $width-small * $slope;
 
-	height: $height;
-	padding-top: $slope * 100%;
+    height: $height;
+    padding-top: $slope * 100%;
 
-	-moz-background-size: cover;
-	background-size: cover;
-	background-position: center;  /* Internet Explorer 7/8 */
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;  /* Internet Explorer 7/8 */
 }
 
 /* Generic vendor-prefix mixin "@include vendor(box-sizing, border-box)" ==== */
@@ -44,14 +44,14 @@
 
 /* Vertical Gradient with solid colour back-up ============================== */
 @mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
-	background-color: $color;
-	background-repeat: repeat-x;
-	background-image: -moz-linear-gradient($start-color, $end-color); /* FF 3.6+ */
-	background-image: -ms-linear-gradient($start-color, $end-color); /* IE10 */
-	background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+ */
-	background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
-	background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%); /* IE10+ */
-	background-image: linear-gradient($start-color, $end-color); /* the standard */
+    background-color: $color;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient($start-color, $end-color); /* FF 3.6+ */
+    background-image: -ms-linear-gradient($start-color, $end-color); /* IE10 */
+    background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
+    background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%); /* IE10+ */
+    background-image: linear-gradient($start-color, $end-color); /* the standard */
 }
 
 /* Box-shadow complete with vendor prefixes ================================= */
@@ -73,23 +73,43 @@
 }
 /* Border-radius with background-clip ======================================= */
 @mixin border-radius($radius: 5px) {
-	border-radius: $radius;
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
 }
 
 /* Opacity complete with vendor prefixes ==================================== */
 @mixin opacity($opacity: 0.5) {
-	-moz-opacity: $opacity;
-	-khtml-opacity: $opacity;
-	-webkit-opacity: $opacity;
-	opacity: $opacity;
+    filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+    opacity: $opacity;
 }
 
 /* Generic transition animation ============================================= */
 @mixin transition($duration:0.2s, $ease:ease-out) {
-	-webkit-transition: all $duration $ease;
-	-moz-transition: all $duration $ease;
-	transition: all $duration $ease;
+    -webkit-transition: all $duration $ease;
+    -moz-transition: all $duration $ease;
+    transition: all $duration $ease;
+}
+
+/* CSS Triangles for pseudo elements ======================================== */
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+    border: solid $triangleSize;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+
+    @if ($triangleDirection == top) {
+        border-color: $triangleColor transparent transparent transparent;
+    }
+    @if ($triangleDirection == bottom) {
+        border-color: transparent transparent $triangleColor transparent;
+    }
+    @if ($triangleDirection == left) {
+        border-color: transparent transparent transparent $triangleColor;
+    }
+    @if ($triangleDirection == right) {
+        border-color: transparent $triangleColor transparent transparent;
+    }
 }
