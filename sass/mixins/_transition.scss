@@ -1,0 +1,17 @@
+/* =============================================================================
+    Transition mixin with speed and timing function
+    ========================================================================= */
+
+@mixin transition($duration:0.2s, $ease:linear) {
+    -webkit-transition: all $duration $ease;
+    -moz-transition: all $duration $ease;
+    transition: all $duration $ease;
+}
+
+/* Example
+
+a {
+    @include transition(0.3s, ease-out);
+}
+
+*/
