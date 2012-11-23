@@ -2,18 +2,17 @@
     Vendor prefix mixin
     ========================================================================= */
 
-@mixin vendor($property, $value){
-    -webkit-#{$property}:$value;
-       -moz-#{$property}:$value;
-        -ms-#{$property}:$value;
-         -o-#{$property}:$value;
-            #{$property}:$value;
+$prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
+@mixin prefix($property, $value) {
+    @each $prefix in $prefixes {
+        #{$prefix}#{$property}: #{$value};
+    }
 }
 
 /* Example
 
 div {
-    @include vendor(box-sizing, border-box);
+    @include prefix(box-sizing, border-box);
 }
 
 */
