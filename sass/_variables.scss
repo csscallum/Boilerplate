@@ -1,47 +1,54 @@
 /* =============================================================================
-	Variables
-	========================================================================= */
+    Variables
+    ========================================================================= */
+
+/* Grid Structure =========================================================== */
+
+$gutter     : 3.125%;
+$max-width  : 1440px;
+$width      : 85%;
+
 
 /* Media Queries ============================================================ */
-
 // Don't necessarily stick to these, consider content-related breakpoints
 
-$tablet-small	: 32.438em; // Large/landscape smartphones, small tablets
-$tablet			: 47.5em;	// Tablet (Portrait) - Add Styling for tablet devices
-$desktop-small	: 60em;		// Desktop/Tablet (landscape) - Add Styling for desktop computers
-$desktop-large	: 86.375em;	// Large Desktop - Add Styling for large desktop computers
+$tablet-small   : 32.438em; // Large/landscape smartphones, small tablets
+$tablet         : 47.5em;   // Tablet (Portrait) - Add Styling for tablet devices
+$desktop-small  : 60em;     // Desktop/Tablet (landscape) - Add Styling for desktop computers
+$desktop-large  : 86.375em; // Large Desktop - Add Styling for large desktop computers
 
 /* Typography =============================================================== */
 
-$basefont 			: sans-serif;
-$basefontsize 		: 16; //px
-$baseline			: 1.5em;
-$regular			: 400;
-$bold				: 700;
+$basefont           : sans-serif;
+$basefontsize       : 16; //px
+$basefontcolour     : #333;
+$baseline           : 1.5em;
+$regular            : 400;
+$bold               : 700;
 
-$seriffont 			: Georgia, serif;
-$headerfont			: $seriffont;
+$seriffont          : Georgia, serif;
+$headerfont         : $seriffont;
+
+// Links
+$linkcolor          : #6A55ED;
+$linkcolorhover     : darken($linkcolor, 10);
+$linkcolorvisited   : $linkcolorhover;
+$linkcolorfocus     : darken($linkcolorhover, 10);
+
+$error          : #F29DA8;
+$warning        : #FAE4B8;
+$success        : #9FD392;
+$information    : #6EBDE5;
 
 /* Branding ================================================================= */
 
-$primary 		: #45281D;
-$secondary 		: #9BB854;
-$alt1 			: #C8D172;
-$alt2 			: #9FAC40;
+$primary        : #45281D;
+$secondary      : #9BB854;
+$alt1           : #C8D172;
+$alt2           : #9FAC40;
 
-$textcolor		: $primary;
-$linkcolor 		: $secondary;
 
-$selection		: $linkcolor;
-$selectionText	: #FFF;
-
-// Links
-$linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited 	: $linkcolorhover;
-$linkcolorfocus 	: darken($linkcolorhover, 10);
+$selection      : $linkcolor;
+$selectionText  : #FFF;
 
 /* Common globals for errors or successes =================================== */
-$error 			: #F29DA8;
-$warning 		: #FAE4B8;
-$success 		: #9FD392;
-$information 	: #6EBDE5;
