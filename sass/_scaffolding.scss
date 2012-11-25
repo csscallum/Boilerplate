@@ -2,8 +2,6 @@
 	Scaffolding
 	========================================================================= */
 
-$gutter: 2%;
-
 @mixin col($cols, $span) {
 	width: ( (100/$cols) * $span) - ( ( ((100 / ((100/$cols) * $span)) - 1) * $gutter ) / ( $cols / $span ) )
 }
@@ -131,7 +129,8 @@ $gutter: 2%;
 @media only screen and (min-width: $desktop-large) {
 	.wrapper {
 		margin: auto;
-		width: 85%
+		max-width: $max-width;
+		width: $width;
 	}
 	[class*="dtl-"] {
 		display: block;
