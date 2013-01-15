@@ -25,6 +25,10 @@ textarea {
 	@include font-size(13);
 }
 
+label {
+	cursor: pointer;
+}
+
 select,
 textarea,
 input[type="text"],
