@@ -1,1 +1,5 @@
-*.scssc
+.DS_Store
+.sass-cache/
+*.swp
+*.swo
+compass_app_log.txt
