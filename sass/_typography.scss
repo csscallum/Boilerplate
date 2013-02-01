@@ -14,7 +14,7 @@ a {
 
 /* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
 p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
-	margin: 0 0 $baseline;
+	margin: 0 0 $basemargin;
 }
 
 /* Copy ===================================================================== */
@@ -33,33 +33,33 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .h1 {
 	border-bottom: 1px solid #CCC;
-	margin-bottom: $baseline / 2;
-	padding-bottom: $baseline / 2;
+	margin-bottom: $basemargin / 2;
+	padding-bottom: $basemargin / 2;
 }
 
 h2, .h2 {
-	margin-bottom: $baseline / 2;
+	margin-bottom: $basemargin / 2;
 }
 
 h3, .h3 {
 	font-weight: $bold;
-	margin-bottom: $baseline / 1.5;
+	margin-bottom: $basemargin / 1.5;
 }
 
 h4, .h4 {
 	letter-spacing: 1px;
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 }
 
 h5, .h5 {
 	font-weight: $bold;
 	line-height: 1.25;
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 }
 
 h6, .h6 {
 	font-weight: $bold;
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 	text-transform: uppercase;
 }
 
@@ -69,7 +69,7 @@ blockquote {
 	border-left: 5px solid $secondary;
 	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.5));
 	padding: 1em;
-	margin-left: -$baseline;
+	margin-left: -$basemargin;
 
 	&:before {
 		color: #999999;

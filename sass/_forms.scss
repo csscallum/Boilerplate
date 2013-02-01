@@ -9,12 +9,12 @@ $labelWidth:		180px;
 
 .form header {
 	border-bottom: 1px solid $inputBorder;
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 }
 
 .field {
 	@include cf;
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 }
 
 label,
@@ -103,7 +103,7 @@ select[size] {
 }
 
 .actions {
-	margin-bottom: $baseline;
+	margin-bottom: $basemargin;
 }
 
 @media only screen and (min-width: $tablet) {
@@ -133,7 +133,7 @@ select[size] {
 .field--radio .input label,
 .field--checkbox-list .input label,
 .field--radio-list .input label {
-	margin: 0 5px 0 $baseline;
+	margin: 0 5px 0 $basemargin;
 	text-align: left;
 	width: auto;
 
