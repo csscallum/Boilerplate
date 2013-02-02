@@ -1,0 +1,21 @@
+/* =============================================================================
+    Breadcrumbs
+    ========================================================================= */
+
+// Breadcrumbs for navigation
+.breadcrumb li {
+    display: inline;
+
+    +li:before {
+        content:"\00BB ";
+    }
+}
+
+// Breadcrumbs for path/progress
+.breadcrumb--path li {
+    display: inline;
+
+    +li:before {
+        content:"/ ";
+    }
+}

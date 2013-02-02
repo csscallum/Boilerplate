@@ -1,0 +1,18 @@
+/* =============================================================================
+    Definition Lists
+    ========================================================================= */
+
+// Horizontal definition list
+.dl-horizontal {
+    @include cf;
+
+    dt {
+        clear: left;
+        float: left;
+        text-align: right;
+        width: 20%;
+    }
+    dd {
+        margin-left: 22%; /* dt width + a little margin for spacing */
+    }
+}
