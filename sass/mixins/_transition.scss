@@ -8,6 +8,12 @@
     transition: all $duration $ease;
 }
 
+@mixin transition-delay($delay:0.2s) {
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
 /* Example
 
 a {
