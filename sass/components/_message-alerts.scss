@@ -7,8 +7,8 @@
     border: 1px solid $warning;
     border-radius: 4px;
     color: darken($warning, 40);
-    margin-bottom: $baseline;
-    padding: $baseline / 2;
+    margin-bottom: $basemargin;
+    padding: $basemargin / 2;
 
     button {
         background: none repeat scroll 0 0 transparent;
