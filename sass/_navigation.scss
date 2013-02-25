@@ -2,9 +2,24 @@
 	Navigation
 	========================================================================= */
 
+nav[role=navigation] {
+	ul {
+		display: none;;
+	}
+	select {
+		margin-bottom: $basemargin;
+		width: 100%;
+	}
+}
+
 @media screen and (min-width: $tablet) {
 	nav[role=navigation] {
 		clear: both;
+		margin-bottom: $basemargin;
+
+		select {
+			display: none;
+		}
 
 		ul {
 			display: table;
