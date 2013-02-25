@@ -19,7 +19,7 @@ $desktop-large  : 86.375em; // Large Desktop - Add Styling for large desktop com
 
 /* Typography =============================================================== */
 
-$basefont           : sans-serif;
+$basefont           : 'Open Sans', sans-serif;
 $basefontsize       : 16; //px
 $basefontcolour     : #333;
 $baseline           : 1.5;
@@ -28,7 +28,7 @@ $regular            : 400;
 $bold               : 700;
 
 $seriffont          : Georgia, serif;
-$headerfont         : $seriffont;
+$headerfont         : $basefont;
 
 // Links
 $linkcolor          : #6A55ED;
