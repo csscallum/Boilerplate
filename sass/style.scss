@@ -24,7 +24,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @import "typography";
 
 /* Responsive navigation ==================================================== */
-@import "navigation";
+@import "navigation/base";
 
 /* Button styles ============================================================ */
 @import "buttons";
@@ -33,7 +33,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @import "tables";
 
 /* Default styling for forms ================================================ */
-@import "forms";
+@import "forms/base";
 
 /* Lightweight snippets for common components =============================== */
 @import "components";
@@ -71,26 +71,52 @@ html, body {
 }
 
 /* Base grid structure ====================================================== */
-@import "scaffolding";
+@import "grid/base";
 
 /* Large/landscape smartphones, small tablets =============================== */
-@media only screen and (min-width: $tablet-small) {
-	@import "519andup";
+@media only screen and (min-width: $alpha) {
+
+    // Load in module specific additions
+    @import "grid/alpha";
+    @import "navigation/alpha";
+    @import "forms/alpha";
+
+    // Load in general styling
+    @import "alpha-andup";
 }
 
 /* Tablet (Portrait) - Add Styling for tablet devices ======================= */
-@media only screen and (min-width: $tablet) {
-	@import "760andup";
+@media only screen and (min-width: $beta) {
+
+    // Load in module specific additions
+    @import "grid/beta";
+    @import "navigation/beta";
+    @import "forms/beta";
+
+    // Load in general styling
+    @import "beta-andup";
 }
 
-/* Desktop/Tablet (landscape) - Add Styling for desktop computers =========== */
-@media only screen and (min-width: $desktop-small) {
-	@import "960andup";
+/* Landscape tablets, small desktop/laptops ================================= */
+@media only screen and (min-width: $gamma) {
+
+    // Load in module specific additions
+    @import "grid/gamma";
+    @import "navigation/gamma";
+    @import "forms/gamma";
+
+    // Load in general styling
+    @import "gamma-andup";
 }
 
 /* Large Desktop - Add Styling for large desktop computers ================== */
-@media only screen and (min-width: $desktop-large) {
-	@import "1382andup";
+@media only screen and (min-width: $delta) {
+
+    // Load in module specific additions
+    @import "grid/delta";
+
+    // Load in general styling
+    @import "delta-andup";
 }
 
 /* Print specific stylesheet ================================================ */
