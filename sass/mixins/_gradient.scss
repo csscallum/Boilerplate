@@ -16,7 +16,7 @@
 /* Example
 
 body {
-    @include gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF);
+    @include gradient(#F5F5F5, #EEE, #FFF);
 }
 
 */
