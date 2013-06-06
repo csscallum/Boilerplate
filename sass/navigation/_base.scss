@@ -1,0 +1,13 @@
+/* =============================================================================
+    Navigation - Small screens and up
+    ========================================================================= */
+
+nav[role=navigation] {
+    ul {
+        display: none;
+    }
+    select {
+        margin-bottom: $basemargin;
+        width: 100%;
+    }
+}
