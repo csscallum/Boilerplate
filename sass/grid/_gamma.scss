@@ -1,0 +1,57 @@
+/* =============================================================================
+    Grid - Landscape tablets, small desktop/laptops and up
+    ========================================================================= */
+
+.wrapper {
+    margin: auto;
+    min-width: $min-width;
+    width: 85%
+}
+[class*="dts-"] {
+    display: block;
+    float: left;
+    margin-left: $gutter;
+}
+[class*="dts-"]:first-child,
+.alpha,
+.dts-12 {
+    clear: left;
+    margin-left: 0;
+}
+.dts-12 {
+    float: none;
+    width: 100%;
+}
+.dts-11 {
+    @include col(12, 11);
+}
+.dts-10 {
+    @include col(12, 10);
+}
+.dts-9 {
+    @include col(12, 9);
+}
+.dts-8 {
+    @include col(12, 8);
+}
+.dts-7 {
+    @include col(12, 7);
+}
+.dts-6 {
+    @include col(12, 6);
+}
+.dts-5 {
+    @include col(12, 5);
+}
+.dts-4 {
+    @include col(12, 4);
+}
+.dts-3 {
+    @include col(12, 3);
+}
+.dts-2 {
+    @include col(12, 2);
+}
+.dts-1 {
+    @include col(12, 1);
+}

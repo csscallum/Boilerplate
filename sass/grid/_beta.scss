@@ -1,0 +1,34 @@
+/* =============================================================================
+    Grid - Portrait tablets devices and up
+    ========================================================================= */
+
+[class*="tb-"] {
+    display: block;
+    float: left;
+    margin-left: $gutter;
+}
+[class*="tb-"]:first-child,
+.alpha,
+.tb-6 {
+    clear: left;
+    margin-left: 0;
+}
+.tb-6 {
+    float: none;
+    width: 100%;
+}
+.tb-5 {
+    @include col(6, 5);
+}
+.tb-4 {
+    @include col(6, 4);
+}
+.tb-3 {
+    @include col(6, 3);
+}
+.tb-2 {
+    @include col(6, 2);
+}
+.tb-1 {
+    @include col(6, 1);
+}

@@ -1,0 +1,69 @@
+/* =============================================================================
+    Grid - Large Desktops
+    ========================================================================= */
+
+.wrapper {
+    margin: auto;
+    max-width: $max-width;
+    width: $width;
+}
+[class*="dtl-"] {
+    display: block;
+    float: left;
+    margin-left: $gutter;
+}
+[class*="dtl-"]:first-child,
+.alpha,
+.dtl-16 {
+    clear: left;
+    margin-left: 0;
+}
+.dtl-16 {
+    float: none;
+    width: 100%;
+}
+.dtl-15 {
+    @include col(16, 15);
+}
+.dtl-14 {
+    @include col(16, 14);
+}
+.dtl-13 {
+    @include col(16, 13);
+}
+.dtl-12 {
+    @include col(16, 12);
+}
+.dtl-11 {
+    @include col(16, 11);
+}
+.dtl-10 {
+    @include col(16, 10);
+}
+.dtl-9 {
+    @include col(16, 9);
+}
+.dtl-8 {
+    @include col(16, 8);
+}
+.dtl-7 {
+    @include col(16, 7);
+}
+.dtl-6 {
+    @include col(16, 6);
+}
+.dtl-5 {
+    @include col(16, 5);
+}
+.dtl-4 {
+    @include col(16, 4);
+}
+.dtl-3 {
+    @include col(16, 3);
+}
+.dtl-2 {
+    @include col(16, 2);
+}
+.dtl-1 {
+    @include col(16, 1);
+}
