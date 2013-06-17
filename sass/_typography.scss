@@ -1,85 +1,133 @@
 /* =============================================================================
-	Typography
-	========================================================================= */
+    Typography
+    ========================================================================= */
 
 a {
-	color: $linkcolor;
-	text-decoration: none;
-	@include transition;
+    color: $linkcolor;
+    text-decoration: none;
+    @include transition;
 
-	&:hover {
-		color: $linkcolorhover;
-	}
+    &:hover {
+        color: $linkcolorhover;
+    }
 }
 
 /* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
 p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
-	margin: 0 0 $basemargin;
-}
-
-/* Copy ===================================================================== */
-
-[role="main"] p,
-[role="main"] ul,
-[role="main"] ol, {
-	@include font-size(14);
+    margin: 0 0 $basemargin;
 }
 
 /* Headings ================================================================= */
 
+$measure: $basefontsize * $baseline;
+
+/* Contrast Through Scale - http://goo.gl/qZ3RP */
+$h1: 64;
+$h2: 40;
+$h3: 24;
+$h4: 18;
+$h5: 16;
+$h6: 14;
+$p: 14;
+
+// typscale unit
+$type-scale-unit-value: rem;
+
+// typographic scale
+@mixin modular-scale($scale, $base, $value, $measure:"") {
+    font-size: $scale#{px};
+    font-size: modular-scale($scale, $base, $value);
+    @if $measure != "" {
+        margin-bottom: measure-margin($scale, $measure, $value);
+    }
+}
+
+// modular scale function to return em equivalent
+@function modular-scale($scale, $base, $value) {
+    // divide a given font-size by base font-size & return a relative em value
+    @return ($scale/$base)#{$value};
+}
+
+// divide 1 unit of measure by given font-size & return a relative em value
+@function measure-margin($scale, $measure, $value) {
+    @return ($measure/$scale)#{$value};
+}
+
+$sizes: h1 $h1, h2 $h2, h3 $h3, h4 $h4, h5 $h5, h6 $h6, p $p;
+
+// associate h1-h6 tags with their appropriate greek heading
+@each $size in $sizes {
+    .#{nth($size, 1)} {
+        @include modular-scale(nth($size, 2), $basefontsize, '#{$type-scale-unit-value}', $measure);
+    }
+}
+
+%hN {
+    // this fixes huge spaces when a heading wraps onto two lines
+    line-height: 1;
+    // voodoo to enable ligatures and kerning
+    text-rendering: optimizeLegibility;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: $headerfont;
+    font-family: $headerfont;
+    @extend %hN;
 }
 
 h1, .h1 {
-	border-bottom: 1px solid #CCC;
-	margin-bottom: $basemargin / 2;
-	padding-bottom: $basemargin / 2;
+    @extend .h1;
 }
 
 h2, .h2 {
-	margin-bottom: $basemargin / 2;
+    @extend .h2;
 }
 
 h3, .h3 {
-	font-weight: $bold;
-	margin-bottom: $basemargin / 1.5;
+    @extend .h3;
 }
 
 h4, .h4 {
-	letter-spacing: 1px;
-	margin-bottom: $basemargin;
+    @extend .h4;
 }
 
 h5, .h5 {
-	font-weight: $bold;
-	line-height: 1.25;
-	margin-bottom: $basemargin;
+    @extend .h5;
 }
 
 h6, .h6 {
-	font-weight: $bold;
-	margin-bottom: $basemargin;
-	text-transform: uppercase;
+    @extend .h6;
+}
+
+/* Copy ===================================================================== */
+
+p,
+ul,
+ol, {
+    @extend .p;
+}
+
+.lead {
+    @extend .h4;
+    font-weight: $medium;
 }
 
 /* Elements ================================================================= */
 
 blockquote {
-	border-left: 5px solid $secondary;
-	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.5));
-	padding: 1em;
-	margin-left: -$basemargin;
+    border-left: 5px solid $secondary;
+    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+    padding: 1em;
+    margin-left: -$basemargin;
 
-	&:before {
-		color: #999999;
-	    content: "\201C ";
-	    display: block;
-	    font: italic 400%/1 $seriffont;
-	    height: 0;
-	    margin-left: -0.95em;
-	}
-	footer {
-		@include font-size(14);
-	}
+    &:before {
+        color: #999999;
+        content: "\201C ";
+        display: block;
+        font: italic 400%/1 $seriffont;
+        height: 0;
+        margin-left: -0.95em;
+    }
+    footer {
+        @include font-size(14);
+    }
 }
