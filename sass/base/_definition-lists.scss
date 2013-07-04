@@ -4,7 +4,7 @@
 
 // Horizontal definition list
 .dl-horizontal {
-    @include cf;
+    @extend .cf;
 
     dt {
         clear: left;

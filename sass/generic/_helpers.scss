@@ -38,14 +38,11 @@
     visibility: hidden;
 }
 
-/* Clearfix ================================================================= */
-@mixin cf() {
-    &:before,
+/* Clearfix - Use @extend cf on element ===================================== */
+.cf {
     &:after {
         content: "";
         display: table;
-    }
-    &:after {
         clear: both;
     }
 }
