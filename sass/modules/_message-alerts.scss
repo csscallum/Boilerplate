@@ -12,8 +12,8 @@
     padding: $basemargin / 2;
 
     button {
-        background: none repeat scroll 0 0 transparent;
-        border: 0 none;
+        background: none;
+        border: none;
         color: darken($warning, 40);
         cursor: pointer;
         float: right;
