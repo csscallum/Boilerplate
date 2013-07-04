@@ -1,0 +1,25 @@
+/* =============================================================================
+    Images
+    ========================================================================= */
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.img--right {
+    float: right;
+    margin-bottom: $basemargin;
+    margin-left: $basemargin;
+}
+
+.img--left {
+    float: left;
+    margin-right: $basemargin;
+    margin-bottom: $basemargin;
+}
+
+.img--center {
+    display: block;
+    margin: 0 auto $basemargin;
+}

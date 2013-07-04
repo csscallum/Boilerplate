@@ -1,0 +1,22 @@
+/* =============================================================================
+    Vertical Gradient with solid colour back-up
+    ========================================================================= */
+
+@mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
+    background-color: $color;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient($start-color, $end-color); /* FF 3.6+ */
+    background-image: -ms-linear-gradient($start-color, $end-color); /* IE10 */
+    background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+ */
+    background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
+    background-image: -ms-linear-gradient(top, $start-color 0%, $end-color 100%); /* IE10+ */
+    background-image: linear-gradient($start-color, $end-color); /* the standard */
+}
+
+/* Example
+
+body {
+    @include gradient(#F5F5F5, #EEE, #FFF);
+}
+
+*/

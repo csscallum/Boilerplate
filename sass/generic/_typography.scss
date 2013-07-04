@@ -1,0 +1,133 @@
+/* =============================================================================
+    Typography
+    ========================================================================= */
+
+a {
+    color: $linkcolor;
+    text-decoration: none;
+    @include transition;
+
+    &:hover {
+        color: $linkcolorhover;
+    }
+}
+
+/* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
+p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
+    margin: 0 0 $basemargin;
+}
+
+/* Headings ================================================================= */
+
+$measure: $basefontsize * $baseline;
+
+/* Contrast Through Scale - http://goo.gl/qZ3RP */
+$h1: 48;
+$h2: 36;
+$h3: 32;
+$h4: 24;
+$h5: 21.333;
+$h6: 16;
+$p: 14;
+
+// typescale unit
+$type-scale-unit-value: rem;
+
+// typographic scale
+@mixin modular-scale($scale, $base, $value, $measure:"") {
+    font-size: $scale#{px};
+    font-size: modular-scale($scale, $base, $value);
+    @if $measure != "" {
+        margin-bottom: measure-margin($scale, $measure, $value);
+    }
+}
+
+// modular scale function to return em equivalent
+@function modular-scale($scale, $base, $value) {
+    // divide a given font-size by base font-size & return a relative em value
+    @return ($scale/$base)#{$value};
+}
+
+// divide 1 unit of measure by given font-size & return a relative em value
+@function measure-margin($scale, $measure, $value) {
+    @return ($measure/$scale)#{$value};
+}
+
+$sizes: h1 $h1, h2 $h2, h3 $h3, h4 $h4, h5 $h5, h6 $h6, p $p;
+
+// associate h1-h6 tags with their appropriate greek heading
+@each $size in $sizes {
+    .#{nth($size, 1)} {
+        @include modular-scale(nth($size, 2), $basefontsize, '#{$type-scale-unit-value}', $measure);
+    }
+}
+
+%hN {
+    // this fixes huge spaces when a heading wraps onto two lines
+    line-height: 1;
+    // voodoo to enable ligatures and kerning
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerfont;
+    @extend %hN;
+}
+
+h1, .h1 {
+    @extend .h1;
+}
+
+h2, .h2 {
+    @extend .h2;
+}
+
+h3, .h3 {
+    @extend .h3;
+}
+
+h4, .h4 {
+    @extend .h4;
+}
+
+h5, .h5 {
+    @extend .h5;
+}
+
+h6, .h6 {
+    @extend .h6;
+}
+
+/* Copy ===================================================================== */
+
+p,
+ul,
+ol, {
+    @extend .p;
+}
+
+.lead {
+    @extend .h4;
+    font-weight: $medium;
+}
+
+/* Elements ================================================================= */
+
+blockquote {
+    border-left: 5px solid $secondary;
+    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+    padding: 1em;
+    margin-left: -$basemargin;
+
+    &:before {
+        color: #999999;
+        content: "\201C ";
+        display: block;
+        font: italic 400%/1 $seriffont;
+        height: 0;
+        margin-left: -0.95em;
+    }
+    footer {
+        @include font-size(14);
+    }
+}

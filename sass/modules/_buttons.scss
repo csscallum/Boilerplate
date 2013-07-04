@@ -1,0 +1,42 @@
+/* =============================================================================
+    Buttons
+    ========================================================================= */
+
+.btn,
+button {
+    background: $primary;
+    border: 0; // For input buttons
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: ($basemargin / 2) $basemargin;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    @include transition;
+
+    &:hover {
+        color: #FFF;
+        background: lighten($primary, 5%);
+    }
+}
+
+.btn-alt {
+    background: $secondary;
+
+    &:hover {
+        color: #FFF;
+        background: lighten($secondary, 5%);
+    }
+}
+
+.btn--lrg {
+    @include font-size(18);
+}
+.btn--sml {
+    @include font-size(12);
+}
+.btn--full {
+    display: block;
+}

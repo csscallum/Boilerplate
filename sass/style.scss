@@ -1,123 +1,91 @@
 @charset "UTF-8";
 
 /* =============================================================================
+
 Boilerplate by Callum Strong
-Version: 0.3.0
+Version: 2.0.0
 URL: https://github.com/csscallum/Boilerplate
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+Website Author:
+
 ============================================================================= */
 
+/* =============================================================================
+    Pre-build - Generic classes, reset (normalize), silent workers
+    ========================================================================= */
 
 /* Mixins - Setup some handy, resuable snippets ============================= */
-@import "mixins";
+@import "generic/mixins";
+
+/* Normalize - Start with a nice clean cross browser base =================== */
+@import "generic/normalize";
+
+/* Reusable helper classes such as IR, Clearfix, border-box etc. ============ */
+@import "generic/helpers";
+
+/* =============================================================================
+    Foundation - Base styles which buld on
+    ========================================================================= */
 
 /* Variables - Establish site wide values =================================== */
 @import "variables";
 
-/* Normalize - Start with a nice clean cross browser base =================== */
-@import "normalize";
+/* Set <html> styles; font, background etc. ================================= */
+@import "base/main";
 
-/* Reusable helper classes such as IR, Clearfix etc. ======================== */
-@import "helpers";
+/* Typography =============================================================== */
+@import "base/headings";
+@import "base/paragraphs";
+@import "base/quotes";
+@import "base/lists";
+@import "base/definition-lists";
+@import "base/links";
 
-/* Typography styling ======================================================= */
-@import "typography";
+/* Images =================================================================== */
+@import "base/images";
 
-/* Responsive navigation ==================================================== */
-@import "navigation/base";
+/* Tables =================================================================== */
+@import "base/tables";
 
-/* Button styles ============================================================ */
-@import "buttons";
+/* Forms ==================================================================== */
+@import "base/forms/base";
 
-/* Default styling for tables =============================================== */
-@import "tables";
-
-/* Default styling for forms ================================================ */
-@import "forms/base";
-
-/* Lightweight snippets for common components =============================== */
-@import "components";
-
-/* Manage your sprite with ease ============================================= */
-@import "sprite";
-
-/* ===== Primary Global Styles =================================================
-    Author: Callum Strong
-    ========================================================================= */
-
-html, body {
-    color: $basefontcolour;
-    font-family: $basefont;
-    font-size: $basefontsize;
-    font-weight: $regular;
-    line-height: $baseline;
-}
+/* Base grid structure ====================================================== */
+@import "modules/grid/base";
 
 /* =============================================================================
-   Reusable assets
-   ========================================================================== */
+    Theming - Modules
+    ========================================================================= */
 
-/* Header  ========================================================= */
+/* Primary ================================================================== */
 
-/* Footer  ========================================================= */
+@import "modules/header/base";
+@import "modules/navigation/base";
+@import "modules/footer/base";
 
-/* Page Structure - Home =========================================== */
+/* Secondary ================================================================ */
 
-/* Page Structure - Further (or type) ============================== */
+@import "modules/breadcrumbs";
+@import "modules/buttons";
+@import "modules/message-alerts";
+@import "modules/pagination";
+@import "modules/sprite";
+@import "modules/tabs";
 
 /* Resolve issue in IE10 Windows 8 "Snap Mode" - http://goo.gl/BLXV7 ======== */
 @-ms-viewport{
     width: device-width;
 }
 
-/* Base grid structure ====================================================== */
-@import "grid/base";
+/* Large/landscape smartphones, small tablets and up ======================== */
+@import "519andup";
 
-/* Large/landscape smartphones, small tablets =============================== */
-@media only screen and (min-width: $alpha) {
+/* Tablets (Portrait) and up ================================================ */
+@import "760andup";
 
-    // Load in module specific additions
-    @import "grid/alpha";
-    @import "navigation/alpha";
-    @import "forms/alpha";
-
-    // Load in general styling
-    @import "alpha-andup";
-}
-
-/* Tablet (Portrait) - Add Styling for tablet devices ======================= */
-@media only screen and (min-width: $beta) {
-
-    // Load in module specific additions
-    @import "grid/beta";
-    @import "navigation/beta";
-    @import "forms/beta";
-
-    // Load in general styling
-    @import "beta-andup";
-}
-
-/* Landscape tablets, small desktop/laptops ================================= */
-@media only screen and (min-width: $gamma) {
-
-    // Load in module specific additions
-    @import "grid/gamma";
-    @import "navigation/gamma";
-    @import "forms/gamma";
-
-    // Load in general styling
-    @import "gamma-andup";
-}
-
-/* Large Desktop - Add Styling for large desktop computers ================== */
-@media only screen and (min-width: $delta) {
-
-    // Load in module specific additions
-    @import "grid/delta";
-
-    // Load in general styling
-    @import "delta-andup";
-}
+/* Landscape tablets, small desktop/laptops and up ========================== */
+@import "960andup";
 
 /* Print specific stylesheet ================================================ */
-@import "print";
+@import "generic/print";

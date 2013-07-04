@@ -1,0 +1,21 @@
+/* =============================================================================
+   Tablet (Portrait) - Add Styling for tablet devices and up   ========================================================================== */
+
+/* Mixins - Setup some handy, resuable snippets ============================= */
+@import "generic/mixins";
+
+/* Reusable helper classes such as IR, Clearfix, border-box etc. ============ */
+@import "generic/helpers";
+
+/* Variables - Establish site wide values =================================== */
+@import "variables";
+
+/* Tablet (Portrait) - Add Styling for tablet devices ======================= */
+@media only screen and (min-width: $beta) {
+
+    /* Forms ================================================================ */
+    @import "base/forms/760andup";
+
+    /* Add additional grid classes ========================================== */
+    @import "modules/grid/760andup";
+}

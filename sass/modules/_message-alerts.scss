@@ -1,0 +1,60 @@
+/* =============================================================================
+    Message Alerts
+    ========================================================================= */
+
+.alert {
+    background: lighten($warning, 5);
+    border: 1px solid $warning;
+    border-radius: 4px;
+    color: darken($warning, 40);
+    @include font-size(14);
+    margin-bottom: $basemargin;
+    padding: $basemargin / 2;
+
+    button {
+        background: none repeat scroll 0 0 transparent;
+        border: 0 none;
+        color: darken($warning, 40);
+        cursor: pointer;
+        float: right;
+        @include font-size(20);
+        font-weight: $bold;
+        @include opacity(.4);
+        padding: 0;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+// When using a specific alert type include base .alert class
+.alert--error {
+    background: lighten($error, 10);
+    border-color: $error;
+    color: darken($error, 40);
+
+    button {
+        color: darken($error, 40);
+    }
+}
+
+.alert--success {
+    background: lighten($success, 10);
+    border-color: $success;
+    color: darken($success, 40);
+
+    button {
+        color: darken($success, 40);
+    }
+}
+
+.alert--information {
+    background: lighten($information, 10);
+    border-color: $information;
+    color: darken($information, 30);
+
+    button {
+        color: darken($information, 30);
+    }
+}

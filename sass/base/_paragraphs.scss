@@ -1,0 +1,12 @@
+/* =============================================================================
+    Typography - Paragraphs
+    ========================================================================= */
+
+p {
+    @include font-size($basefontsize);
+}
+
+.lead {
+    @include font-size($basefontsize * 1.125);
+    font-weight: $medium;
+}

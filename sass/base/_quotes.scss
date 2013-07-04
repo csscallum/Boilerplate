@@ -1,0 +1,21 @@
+/* =============================================================================
+    Quotes
+    ========================================================================= */
+
+blockquote {
+    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+    padding: 1em;
+    margin-left: $basemargin;
+
+    &:before {
+        color: #999999;
+        content: "\201C ";
+        display: block;
+        font: italic 400%/1 $seriffont;
+        height: 0;
+        margin-left: -0.95em;
+    }
+    footer {
+        @include font-size(14);
+    }
+}
