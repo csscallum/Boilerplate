@@ -29,7 +29,7 @@ table {
     }
 }
 
-.table-striped {
+.table--striped {
     tbody {
         tr:nth-child(odd) td,
         tr:nth-child(odd) th {
@@ -42,7 +42,7 @@ table {
     }
 }
 
-.table-bordered {
+.table--bordered {
     border: $tableRowBorder;
     border-collapse: separate;
     *border-collapse: collapse;
