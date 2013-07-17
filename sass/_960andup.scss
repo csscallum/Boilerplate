@@ -2,15 +2,6 @@
    Landscape tablets, small desktop/laptops and up
    ========================================================================== */
 
-/* Mixins - Setup some handy, resuable snippets ============================= */
-@import "generic/mixins";
-
-/* Reusable helper classes such as IR, Clearfix, border-box etc. ============ */
-@import "generic/helpers";
-
-/* Variables - Establish site wide values =================================== */
-@import "variables";
-
 /* Landscape tablets, small desktop/laptops ================================= */
 @media only screen and (min-width: $gamma) {
 

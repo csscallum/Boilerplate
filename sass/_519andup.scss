@@ -2,15 +2,6 @@
    Large/landscape smartphones, small tablets and up
    ========================================================================== */
 
-/* Mixins - Setup some handy, resuable snippets ============================= */
-@import "generic/mixins";
-
-/* Reusable helper classes such as IR, Clearfix, border-box etc. ============ */
-@import "generic/helpers";
-
-/* Variables - Establish site wide values =================================== */
-@import "variables";
-
 /* Large/landscape smartphones, small tablets =============================== */
 @media only screen and (min-width: $alpha) {
 
