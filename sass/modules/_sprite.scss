@@ -23,7 +23,7 @@ $gridSize		: 32; // px
 
 .icn {
 	display: inline-block;
-	@include ir;
+	@extend %ir;
 }
 
 .icn--flight {
