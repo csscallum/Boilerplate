@@ -4,8 +4,9 @@
 
 .wrapper {
     margin: auto;
+    max-width: $max-width;
     min-width: $min-width;
-    width: 85%
+    width: $width;
 }
 [class*="dts-"] {
     display: block;
