@@ -424,7 +424,13 @@
     </footer>
 </div>
 
-<script src="js/min/script.min.js"></script>
+<script src="js/min/basket.min.js"></script>
+<script>
+    basket.require(
+        { url: 'js/min/jquery.min.js' },
+        { url: 'js/min/script.min.js' }
+    );
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

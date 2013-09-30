@@ -66,3 +66,4 @@ w.addEventListener( "devicemotion", checkTilt, false );
         this.classList.toggle("active");
     });
 });
+
