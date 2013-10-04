@@ -1,13 +1,11 @@
-/* =============================================================================
-   normalize.css v2.1.2 | MIT License | git.io/normalize
-   ========================================================================== */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 
 /**
- * Correct 'block' display not defined in IE 8/9.
+ * Correct `block` display not defined in IE 8/9.
  */
 
 article,
@@ -26,7 +24,7 @@ summary {
 }
 
 /**
- * Correct 'inline-block' display not defined in IE 8/9.
+ * Correct `inline-block` display not defined in IE 8/9.
  */
 
 audio,
@@ -36,7 +34,7 @@ video {
 }
 
 /**
- * Prevent modern browsers from displaying 'audio' without controls.
+ * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 
@@ -46,10 +44,12 @@ audio:not([controls]) {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
 
-[hidden] {
+[hidden],
+template {
     display: none;
 }
 
@@ -82,7 +82,15 @@ body {
    ========================================================================== */
 
 /**
- * Address 'outline' inconsistency between Chrome and other browsers.
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+    background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
  */
 
 a:focus {
@@ -103,6 +111,16 @@ a:hover {
    ========================================================================== */
 
 /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
 
@@ -111,7 +129,7 @@ abbr[title] {
 }
 
 /**
- * Address style set to 'bolder' in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 
 b,
@@ -183,7 +201,7 @@ small {
 }
 
 /**
- * Prevent 'sub' and 'sup' affecting 'line-height' in all browsers.
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 
 sub,
@@ -207,7 +225,7 @@ sub {
    ========================================================================== */
 
 /**
- * Remove border when inside 'a' element in IE 8/9.
+ * Remove border when inside `a` element in IE 8/9.
  */
 
 img {
@@ -239,7 +257,17 @@ figure {
    ========================================================================== */
 
 /**
- * 1. Correct 'color' not being inherited in IE 8/9.
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
@@ -264,7 +292,7 @@ textarea {
 }
 
 /**
- * Address Firefox 4+ setting 'line-height' on 'input' using '!important' in
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 
@@ -274,10 +302,10 @@ input {
 }
 
 /**
- * Address inconsistent 'text-transform' inheritance for 'button' and 'select'.
- * All other form control elements do not inherit 'text-transform' values.
- * Correct 'button' style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct 'select' style inheritance in Firefox 4+ and Opera.
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
 
 button,
@@ -286,11 +314,11 @@ select {
 }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native 'audio'
- *    and 'video' controls.
- * 2. Correct inability to style clickable 'input' types in iOS.
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
- *    'input' and others.
+ *    `input` and others.
  */
 
 button,
@@ -311,8 +339,8 @@ html input[disabled] {
 }
 
 /**
- * 1. Address box sizing set to 'content-box' in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
  */
 
 input[type="checkbox"],
@@ -322,9 +350,9 @@ input[type="radio"] {
 }
 
 /**
- * 1. Address 'appearance' set to 'searchfield' in Safari 5 and Chrome.
- * 2. Address 'box-sizing' set to 'border-box' in Safari 5 and Chrome
- *    (include '-moz' to future-proof).
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
  */
 
 input[type="search"] {
