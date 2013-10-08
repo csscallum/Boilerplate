@@ -3,3 +3,4 @@
 *.swp
 *.swo
 compass_app_log.txt
+node_modules/
