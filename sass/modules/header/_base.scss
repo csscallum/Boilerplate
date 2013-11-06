@@ -10,8 +10,4 @@
 
 .logo {
     color: #FFF;
-
-    &:hover {
-        @include animation(1s, 5s, fadeout);
-    }
 }

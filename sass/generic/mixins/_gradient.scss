@@ -5,15 +5,15 @@
 @mixin gradient($color: #F5F5F5, $start-color: #EEE, $end-color: #FFF) {
     background-color: $color;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+, iOS Safari, Android */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start-color), to($end-color)); /* Android 2.1 - 3.0 */
+    background-image: -webkit-linear-gradient($start-color, $end-color); /* Safari 5.1+, Chrome 10+, iOS Safari, Android 4.0+ */
     background-image: -o-linear-gradient($start-color, $end-color); /* Opera 11.10 */
     background-image: linear-gradient($start-color, $end-color); /* the standard */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 ); /* IE6-9 */
 }
 
 /* Example
 
-body {
+nav {
     @include gradient(#F5F5F5, #EEE, #FFF);
 }
 

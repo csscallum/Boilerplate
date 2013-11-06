@@ -3,14 +3,12 @@
     ========================================================================= */
 
 @mixin transition($duration:0.2s, $ease:linear) {
-    -webkit-transition: all $duration $ease;
-    -moz-transition: all $duration $ease;
+    -webkit-transition: all $duration $ease;	/* Android 2.1 - 4.3, Blackberry 7+ */
     transition: all $duration $ease;
 }
 
 @mixin transition-delay($delay:0.2s) {
-    -webkit-transition-delay: $delay;
-    -moz-transition-delay: $delay;
+    -webkit-transition-delay: $delay;	/* Android 2.1 - 4.3, Blackberry 7+ */
     transition-delay: $delay;
 }
 

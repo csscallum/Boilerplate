@@ -11,6 +11,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uncss: {
+            dist: {
+                files: {
+                    'css/style.css': ['index.html']
+                },
+                options: {
+                    compress: true
+                }
+            }
+        },
         uglify: {
             my_target: {
                 files: {
@@ -43,9 +53,10 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass', 'uncss', 'uglify', 'imagemin', 'watch']);
 }
