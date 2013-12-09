@@ -1,26 +1,3 @@
 /* =============================================================================
     Navigation - Landscape tablets, small desktop/laptops and up
     ========================================================================= */
-
-.menu-trigger {
-    display: none;
-}
-
-.nav {
-    background: none;
-    float: right;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    width: auto;
-
-    li {
-        display: inline;
-        margin-left: 2em;
-    }
-
-    a {
-        color: #FFF;
-        @include opacity(1);
-    }
-}
