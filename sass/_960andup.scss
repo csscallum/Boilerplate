@@ -2,7 +2,11 @@
    Landscape tablets, small desktop/laptops and up
    ========================================================================== */
 
+/* Landscape tablets, small desktop/laptops ================================= */
 @media only screen and (min-width: $gamma) {
+
+    /* Typography =========================================================== */
+    @import "base/typography/960andup";
 
     /* Forms ================================================================ */
     @import "base/forms/960andup";
@@ -19,35 +23,15 @@
     @import "modules/header/960andup";
     @import "modules/navigation/960andup";
     @import "modules/footer/960andup";
-
-    /* Secondary ============================================================ */
-
-    //@import "";
-
 }
 
-/* =============================================================================
-   Large Desktop - Add Styling for large desktop computers
-   ========================================================================== */
-
+/* Large Desktop - Add Styling for large desktop computers ================== */
 @media only screen and (min-width: $delta) {
+
+    /* Typography =========================================================== */
+    @import "base/typography/1382andup";
 
     /* Add additional grid classes ========================================== */
     @import "modules/grid/1382andup";
-
-
-    /* =========================================================================
-        Theming - Modules
-    ========================================================================= */
-
-    /* Primary ============================================================== */
-
-    // @import "modules/header/1382andup";
-    // @import "modules/navigation/1382andup";
-    // @import "modules/footer/1382andup";
-
-    /* Secondary ============================================================ */
-
-    //@import "";
 
 }

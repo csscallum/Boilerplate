@@ -3,7 +3,6 @@
 /* =============================================================================
 
 Boilerplate by Callum Strong
-Version: 2.0.0
 URL: https://github.com/csscallum/Boilerplate
 Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -35,8 +34,7 @@ Website Author:
 @import "base/main";
 
 /* Typography =============================================================== */
-@import "base/headings";
-@import "base/paragraphs";
+@import "base/typography/base";
 @import "base/quotes";
 @import "base/lists";
 @import "base/definition-lists";
