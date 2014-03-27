@@ -2,6 +2,7 @@
    Tablet (Portrait) - Add Styling for tablet devices and up
    ========================================================================== */
 
+/* Tablet (Portrait) - Add Styling for tablet devices ======================= */
 @media only screen and (min-width: $beta) {
 
     /* Typography =========================================================== */
@@ -12,18 +13,4 @@
 
     /* Add additional grid classes ========================================== */
     @import "modules/grid/760andup";
-
-    /* =========================================================================
-        Theming - Modules
-    ========================================================================= */
-
-    /* Primary ============================================================== */
-
-    @import "modules/header/760andup";
-    @import "modules/navigation/760andup";
-    @import "modules/footer/760andup";
-
-    /* Secondary ============================================================ */
-
-    //@import "";
 }

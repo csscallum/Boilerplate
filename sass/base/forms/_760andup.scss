@@ -1,9 +1,22 @@
 /* =============================================================================
-   Tablet (Portrait) - Form styling for tablet devices and up   ========================================================================== */
+   Tablet (Portrait) - Form styling for tablet devices and up   
+   ========================================================================== */
+
+input,
+select,
+textarea {
+    width: $inputWidth;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+    width: 100%;
+}
 
 .form--horizontal {
     label {
         display: inline-block;
+        @include line-height(28);
         margin-right: 10px;
         vertical-align: top;
         width: $labelWidth;
@@ -13,5 +26,5 @@
     }
 }
 .actions {
-    padding-left: $labelWidth + 10px;
+    padding-left: $labelWidth + 14px;
 }

@@ -2,6 +2,7 @@
    Large/landscape smartphones, small tablets and up
    ========================================================================== */
 
+/* Large/landscape smartphones, small tablets =============================== */
 @media only screen and (min-width: $alpha) {
 
     /* Typography =========================================================== */
@@ -20,8 +21,5 @@
     @import "modules/navigation/519andup";
     @import "modules/footer/519andup";
 
-    /* Secondary ============================================================ */
-
-    //@import "";
 
 }
