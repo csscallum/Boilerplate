@@ -4,6 +4,9 @@
 
 @media only screen and (min-width: $beta) {
 
+    /* Typography =========================================================== */
+    @import "base/typography/760andup";
+
     /* Forms ================================================================ */
     @import "base/forms/760andup";
 

@@ -4,6 +4,9 @@
 
 @media only screen and (min-width: $alpha) {
 
+    /* Typography =========================================================== */
+    @import "base/typography/519andup";
+
     /* Add additional grid classes ========================================== */
     @import "modules/grid/519andup";
 
