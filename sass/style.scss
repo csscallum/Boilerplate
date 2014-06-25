@@ -10,6 +10,9 @@ Website Author:
 
 ============================================================================= */
 
+/* Variables - Establish site wide values =================================== */
+@import "variables";
+
 /* =============================================================================
     Pre-build - Generic classes, reset (normalize), silent workers
     ========================================================================= */
@@ -17,8 +20,8 @@ Website Author:
 /* Mixins - Setup some handy, resuable snippets ============================= */
 @import "generic/mixins";
 
-/* Normalize - Start with a nice clean cross browser base =================== */
-@import "generic/normalize";
+/* Reset - A minimal reset that targets only "likely to be used" elements === */
+@import "generic/reset";
 
 /* Reusable helper classes such as IR, Clearfix, border-box etc. ============ */
 @import "generic/helpers";
@@ -26,9 +29,6 @@ Website Author:
 /* =============================================================================
     Foundation - Base styles which buld on
     ========================================================================= */
-
-/* Variables - Establish site wide values =================================== */
-@import "variables";
 
 /* Set <html> styles; font, background etc. ================================= */
 @import "base/main";

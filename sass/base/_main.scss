@@ -10,15 +10,3 @@ html {
     font-weight: $regular;
     line-height: $baseline;
 }
-
-/* Single-direction margin declarations - http://goo.gl/QWu22 =============== */
-p, h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, figure, pre, table, fieldset, legend, hr {
-    margin: 0 0 $basemargin;
-}
-
-/* { box-sizing: border-box } FTW - http://goo.gl/ggTvz ===================== */
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
